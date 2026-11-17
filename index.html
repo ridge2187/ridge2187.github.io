@@ -1,0 +1,1148 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>结衣波多野种子迅雷-资源检索与下载方式解析</title>
+<meta name="description" content="结衣波多野种子迅雷是围绕相关人物作品资源检索与下载方式的整理专题，梳理影片编号、磁力链接与迅雷离线下载的常见问题，提供作品目录、检索方法与使用注意事项。">
+<meta name="keywords" content="结衣波多野种子迅雷">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23b3253c'/%3E%3Cpath d='M32 12v26m0 0-9-9m9 9 9-9M18 46h28' stroke='%23fff' stroke-width='4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "结衣波多野种子迅雷",
+  "inLanguage": "zh-CN",
+  "description": "围绕相关人物作品资源检索与迅雷下载方式的中文整理专题",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "/#search",
+    "query-input": "required name=q"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "磁力链接与种子文件有什么区别？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "磁力链接只包含哈希指纹，不携带文件内容，占用极小；种子文件是完整的 torrent 描述文件，内含分片信息和服务器地址，打开后即可开始下载。迅雷对两者都支持，磁力链接无需先下载文件。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "迅雷离线下载为什么有时显示无速度？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "离线下载依赖服务器端已有资源，当哈希对应的文件在云端不存在且近期无其他用户提交时，任务会停留在等待状态，界面显示零速度。此时可更换同类资源或改用非离线模式。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "同一部作品为什么会有多个不同文件体积？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "体积差异主要来自画质参数与封装格式，720p 常见于 1 至 2GB，1080p 多在 3 至 6GB，4K 修复版可达 15GB 以上。另外字幕是否内嵌、是否剪去片头也会影响最终大小。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "如何确认一个资源条目与作品是对应的？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "先核对发行方公布的番号或作品编号，再看种子文件名中的日期与时长字段，最后对照封面缩略图。三项一致基本可确认对应关系，仅有标题文字相同不足以判断。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "下载后无法播放该怎么排查？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "先看文件扩展名与播放器支持的解码格式，MKV 封装常需更新解码器；再检查文件大小是否与种子描述一致，明显偏小说明下载未完成。若均正常，可尝试以 VLC 打开。"
+      }
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#f6f4f1;
+  --surface:#ffffff;
+  --ink:#1d1b1a;
+  --ink-soft:#55504d;
+  --ink-mute:#857e79;
+  --line:#e3ded8;
+  --brand:#b3253c;
+  --brand-dark:#8c1a2d;
+  --brand-soft:#fbe9ec;
+  --accent:#1f5f6b;
+  --accent-soft:#e4eff1;
+  --gold:#a8802a;
+  --radius-s:6px;
+  --radius-m:12px;
+  --radius-l:20px;
+  --shadow-s:0 1px 2px rgba(29,27,26,.06);
+  --shadow-m:0 6px 20px rgba(29,27,26,.08);
+  --space-1:6px;
+  --space-2:12px;
+  --space-3:18px;
+  --space-4:28px;
+  --space-5:44px;
+  --space-6:64px;
+  --font-sans:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  --font-mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+  --announce-h:38px;
+  --header-h:66px;
+  --sticky-offset:calc(var(--announce-h) + var(--header-h));
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--sticky-offset) + 14px);}
+body{
+  font-family:var(--font-sans);
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{color:var(--brand);text-decoration:none;}
+a:hover{text-decoration:underline;}
+h1,h2,h3,h4{line-height:1.35;font-weight:700;}
+h2{font-size:1.5rem;letter-spacing:.01em;}
+h3{font-size:1.12rem;}
+p{margin:0 0 var(--space-2);}
+ul,ol{padding-left:1.3em;}
+li{margin-bottom:6px;}
+.wrap{width:min(1160px,100% - 40px);margin-inline:auto;}
+.btn{
+  display:inline-block;padding:10px 20px;border-radius:999px;
+  background:var(--brand);color:#fff;font-weight:600;font-size:.95rem;
+  border:1px solid var(--brand);cursor:pointer;
+  transition:transform .18s ease,background .18s ease;
+}
+.btn:hover{background:var(--brand-dark);text-decoration:none;transform:translateY(-2px);}
+.btn.ghost{background:transparent;color:var(--brand);}
+.btn.ghost:hover{background:var(--brand-soft);}
+.btn.small{padding:7px 14px;font-size:.88rem;}
+
+/* 公告条 */
+.announce{
+  position:sticky;top:0;z-index:60;
+  background:linear-gradient(90deg,var(--brand-dark),var(--brand));
+  color:#fff;height:var(--announce-h);
+  display:flex;align-items:center;overflow:hidden;
+}
+.announce .wrap{display:flex;align-items:center;gap:10px;font-size:.88rem;white-space:nowrap;overflow:hidden;}
+.announce .tag{background:#fff;color:var(--brand);font-weight:700;border-radius:4px;padding:1px 8px;font-size:.78rem;flex:none;}
+.announce .txt{overflow:hidden;text-overflow:ellipsis;opacity:.95;}
+.announce .txt b{font-weight:700;}
+
+/* 页头 */
+.site-header{
+  position:sticky;top:var(--announce-h);z-index:50;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.site-header .wrap{
+  height:var(--header-h);display:flex;align-items:center;gap:var(--space-3);
+}
+.brand{display:flex;align-items:center;gap:10px;color:var(--ink);flex:none;}
+.brand:hover{text-decoration:none;}
+.brand-logo{width:36px;height:36px;flex:none;}
+.brand-name{font-weight:800;font-size:1.02rem;letter-spacing:.02em;}
+.main-nav{margin-left:auto;display:flex;align-items:center;gap:4px;flex-wrap:nowrap;}
+.main-nav a{
+  color:var(--ink-soft);font-size:.9rem;padding:8px 10px;border-radius:var(--radius-s);
+  white-space:nowrap;transition:background .15s;
+}
+.main-nav a:hover,.main-nav a:focus-visible{background:var(--brand-soft);color:var(--brand);text-decoration:none;}
+.nav-toggle{
+  display:none;margin-left:auto;width:42px;height:42px;border:1px solid var(--line);
+  background:#fff;border-radius:var(--radius-s);cursor:pointer;
+}
+.nav-toggle span{display:block;width:20px;height:2px;background:var(--ink);margin:4px auto;transition:.2s;}
+.header-actions{display:flex;align-items:center;gap:8px;flex:none;}
+.search-box{position:relative;display:flex;align-items:center;}
+.search-box input{
+  font:inherit;font-size:.88rem;padding:8px 12px;border:1px solid var(--line);
+  border-radius:999px;width:180px;background:var(--bg);color:var(--ink);
+}
+.search-box input:focus{outline:2px solid var(--brand);outline-offset:1px;background:#fff;width:210px;}
+.search-feedback{
+  position:absolute;top:calc(100% + 8px);right:0;background:#fff;border:1px solid var(--line);
+  border-radius:var(--radius-s);box-shadow:var(--shadow-m);padding:10px 14px;font-size:.85rem;
+  min-width:220px;display:none;color:var(--ink-soft);z-index:70;
+}
+.search-feedback.open{display:block;}
+.search-feedback b{color:var(--brand);}
+#search-hit{color:var(--accent);font-weight:600;}
+
+/* 首屏 */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(1100px 420px at 82% -10%,var(--brand-soft),transparent 60%),
+    radial-gradient(800px 380px at 0% 110%,var(--accent-soft),transparent 60%),
+    var(--surface);
+  border-bottom:1px solid var(--line);
+}
+.hero .wrap{
+  display:grid;grid-template-columns:1.15fr .85fr;gap:var(--space-5);
+  padding:var(--space-6) 0 var(--space-5);align-items:center;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;background:var(--brand-soft);color:var(--brand-dark);
+  font-size:.82rem;font-weight:700;padding:5px 14px;border-radius:999px;margin-bottom:var(--space-3);
+  letter-spacing:.04em;
+}
+.hero-badge .dot{width:7px;height:7px;border-radius:50%;background:var(--brand);flex:none;}
+.hero h1{font-size:clamp(1.7rem,4vw,2.6rem);letter-spacing:.01em;margin-bottom:var(--space-2);}
+.hero-sub{font-size:1.02rem;color:var(--ink-soft);max-width:34em;margin-bottom:var(--space-3);}
+.hero-sub em{font-style:normal;color:var(--brand);font-weight:700;}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:var(--space-4);}
+.hero-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-3);border-top:1px solid var(--line);padding-top:var(--space-3);}
+.hero-facts div{min-width:0;}
+.hero-facts strong{display:block;font-size:1.28rem;color:var(--brand-dark);font-family:var(--font-mono);letter-spacing:-.02em;}
+.hero-facts span{font-size:.8rem;color:var(--ink-mute);}
+.hero-visual{
+  position:relative;aspect-ratio:1/1;max-width:420px;justify-self:end;width:100%;
+}
+.hero-visual svg{width:100%;height:100%;display:block;}
+.hero-visual .float-card{
+  position:absolute;background:#fff;border:1px solid var(--line);border-radius:var(--radius-m);
+  box-shadow:var(--shadow-m);padding:10px 14px;font-size:.8rem;color:var(--ink-soft);
+}
+.hero-visual .fc1{top:6%;left:-4%;}
+.hero-visual .fc2{bottom:12%;right:-4%;}
+.hero-visual .float-card b{color:var(--ink);display:block;font-size:.9rem;}
+
+/* 频道导航 */
+.channels{background:var(--surface);border-bottom:1px solid var(--line);}
+.channels .wrap{padding:var(--space-3) 0;display:flex;gap:8px;overflow-x:auto;scrollbar-width:thin;}
+.channels a{
+  flex:none;font-size:.88rem;padding:7px 14px;border:1px solid var(--line);border-radius:999px;
+  color:var(--ink-soft);white-space:nowrap;background:var(--bg);
+  transition:background .15s,color .15s,border-color .15s;
+}
+.channels a:hover,.channels a:focus-visible{background:var(--brand);border-color:var(--brand);color:#fff;text-decoration:none;}
+
+/* 主内容布局 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:var(--space-5);padding:var(--space-5) 0 var(--space-6);align-items:start;}
+main{min-width:0;}
+aside{min-width:0;position:sticky;top:calc(var(--sticky-offset) + 20px);display:flex;flex-direction:column;gap:var(--space-4);}
+
+section.block{scroll-margin-top:calc(var(--sticky-offset) + 16px);margin-bottom:var(--space-6);}
+.block-head{display:flex;align-items:baseline;gap:12px;margin-bottom:var(--space-3);flex-wrap:wrap;}
+.block-head h2{position:relative;padding-left:14px;}
+.block-head h2::before{content:"";position:absolute;left:0;top:.18em;bottom:.18em;width:4px;border-radius:2px;background:var(--brand);}
+.block-head .hint{font-size:.82rem;color:var(--ink-mute);}
+
+/* 概览 */
+.overview-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:var(--space-3);}
+.overview-main{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-m);padding:var(--space-4);box-shadow:var(--shadow-s);}
+.overview-main p{color:var(--ink-soft);}
+.term-list{display:grid;grid-template-columns:repeat(2,1fr);gap:8px 16px;margin-top:var(--space-3);list-style:none;padding:0;}
+.term-list li{font-size:.9rem;color:var(--ink-soft);padding-left:16px;position:relative;}
+.term-list li::before{content:"";position:absolute;left:0;top:.7em;width:6px;height:6px;border-radius:1px;background:var(--gold);transform:rotate(45deg);}
+.term-list li b{color:var(--ink);}
+.overview-side{display:flex;flex-direction:column;gap:var(--space-3);}
+.mini-panel{background:var(--brand-soft);border-radius:var(--radius-m);padding:var(--space-3);}
+.mini-panel h3{font-size:.95rem;color:var(--brand-dark);margin-bottom:8px;}
+.mini-panel p{font-size:.86rem;color:var(--ink-soft);margin:0;}
+
+/* 精选推荐 */
+.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-3);}
+.card{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-m);
+  overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow-s);
+  transition:transform .18s ease,box-shadow .18s ease;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-m);}
+.card .thumb{aspect-ratio:16/9;width:100%;object-fit:cover;background:var(--line);}
+.card-body{padding:var(--space-3);display:flex;flex-direction:column;gap:8px;flex:1;}
+.card-body h3{font-size:1.02rem;}
+.card-body p{font-size:.88rem;color:var(--ink-soft);margin:0;flex:1;}
+.meta-row{display:flex;flex-wrap:wrap;gap:6px;font-size:.76rem;color:var(--ink-mute);}
+.meta-row span{background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:1px 7px;}
+
+/* 最新更新 */
+.update-list{list-style:none;padding:0;margin:0;border-left:2px solid var(--line);}
+.update-list li{position:relative;padding:0 0 var(--space-3) var(--space-4);margin:0;}
+.update-list li::before{content:"";position:absolute;left:-6px;top:.55em;width:10px;height:10px;border-radius:50%;background:#fff;border:2px solid var(--brand);}
+.update-list time{font-family:var(--font-mono);font-size:.78rem;color:var(--brand);display:block;letter-spacing:.02em;}
+.update-list b{display:block;font-size:.97rem;margin:2px 0 2px;}
+.update-list span{font-size:.86rem;color:var(--ink-soft);}
+
+/* 分类入口 */
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+.cat-grid a{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-s);
+  padding:12px 14px;color:var(--ink);font-size:.9rem;display:flex;justify-content:space-between;align-items:center;
+  transition:border-color .15s,background .15s;
+}
+.cat-grid a:hover{text-decoration:none;border-color:var(--brand);background:var(--brand-soft);}
+.cat-grid a small{color:var(--ink-mute);font-family:var(--font-mono);font-size:.74rem;}
+
+/* 深度解析 */
+.deep{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-l);padding:var(--space-5);box-shadow:var(--shadow-s);}
+.deep h2{margin-bottom:var(--space-2);}
+.deep .lede{color:var(--ink-soft);border-left:3px solid var(--brand);padding-left:14px;margin-bottom:var(--space-4);}
+.deep h3{margin:var(--space-4) 0 var(--space-2);color:var(--brand-dark);}
+.deep p{color:var(--ink-soft);}
+.deep strong{color:var(--ink);}
+.verdict{
+  background:var(--accent-soft);border:1px solid #c6dde1;border-radius:var(--radius-m);
+  padding:var(--space-3) var(--space-4);margin:var(--space-3) 0;color:var(--ink);
+}
+.verdict b{color:var(--accent);}
+table.cmp{width:100%;border-collapse:collapse;font-size:.88rem;margin:var(--space-2) 0 var(--space-3);}
+table.cmp th,table.cmp td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top;}
+table.cmp th{background:var(--bg);font-weight:700;color:var(--ink);}
+table.cmp td{color:var(--ink-soft);}
+.timeline-mini{list-style:none;padding:0;margin:var(--space-2) 0 var(--space-3);font-size:.9rem;}
+.timeline-mini li{display:grid;grid-template-columns:96px 1fr;gap:12px;padding:6px 0;border-bottom:1px dashed var(--line);}
+.timeline-mini li:last-child{border-bottom:0;}
+.timeline-mini time{font-family:var(--font-mono);color:var(--brand);font-size:.82rem;}
+
+/* 体验指南：编号步骤 */
+.steps{list-style:none;padding:0;counter-reset:step;display:grid;gap:var(--space-3);}
+.steps li{
+  counter-increment:step;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-m);
+  padding:var(--space-3) var(--space-3) var(--space-3) 64px;position:relative;
+}
+.steps li::before{
+  content:counter(step);position:absolute;left:18px;top:var(--space-3);
+  width:32px;height:32px;border-radius:50%;background:var(--brand);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-weight:700;
+}
+.steps li b{display:block;margin-bottom:2px;}
+.steps li span{font-size:.88rem;color:var(--ink-soft);}
+
+/* 对照面板 */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3);}
+.compare .pane{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-m);padding:var(--space-3);}
+.compare .pane.hi{border-color:var(--brand);box-shadow:0 0 0 1px var(--brand) inset;}
+.compare .pane h3{font-size:.98rem;margin-bottom:8px;}
+.compare .pane ul{margin:0;font-size:.88rem;color:var(--ink-soft);}
+
+/* 标签索引 */
+.tag-cloud{display:flex;flex-wrap:wrap;gap:8px;}
+.tag-cloud a{
+  font-size:.85rem;padding:5px 12px;border-radius:999px;background:var(--surface);
+  border:1px solid var(--line);color:var(--ink-soft);
+}
+.tag-cloud a:hover{background:var(--accent);border-color:var(--accent);color:#fff;text-decoration:none;}
+.tag-cloud a.hot{background:var(--brand-soft);border-color:#f0c4cc;color:var(--brand-dark);font-weight:600;}
+
+/* FAQ */
+.faq details{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-m);
+  margin-bottom:10px;overflow:hidden;
+}
+.faq summary{
+  cursor:pointer;padding:14px var(--space-4);font-weight:600;font-size:.97rem;position:relative;
+  list-style:none;transition:background .15s;
+}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:1.2rem;color:var(--brand);font-weight:400;}
+.faq details[open] summary{background:var(--brand-soft);}
+.faq details[open] summary::after{content:"−";}
+.faq .ans{padding:0 var(--space-4) 14px;font-size:.9rem;color:var(--ink-soft);}
+
+/* 评论 */
+.comments{display:grid;gap:var(--space-3);}
+.comment{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-m);padding:var(--space-3) var(--space-4);}
+.comment-head{display:flex;align-items:center;gap:10px;margin-bottom:6px;flex-wrap:wrap;}
+.avatar{width:32px;height:32px;border-radius:50%;background:var(--brand-soft);color:var(--brand-dark);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;flex:none;}
+.comment-head b{font-size:.9rem;}
+.comment-head time{font-size:.76rem;color:var(--ink-mute);font-family:var(--font-mono);margin-left:auto;}
+.comment p{font-size:.9rem;color:var(--ink-soft);margin:0;}
+.comment .ref{font-size:.78rem;color:var(--accent);background:var(--accent-soft);border-radius:4px;padding:1px 7px;display:inline-block;margin-top:6px;}
+
+/* 补充板块：榜单 */
+.rank-list{list-style:none;padding:0;counter-reset:rk;display:grid;gap:2px;}
+.rank-list li{
+  counter-increment:rk;display:grid;grid-template-columns:40px 1fr auto;gap:12px;align-items:center;
+  background:var(--surface);border:1px solid var(--line);padding:10px 14px;border-radius:var(--radius-s);
+}
+.rank-list li::before{
+  content:counter(rk);font-family:var(--font-mono);font-weight:700;color:var(--ink-mute);
+  font-size:1rem;text-align:center;
+}
+.rank-list li:nth-child(1)::before{color:var(--gold);}
+.rank-list li:nth-child(2)::before{color:#7c8790;}
+.rank-list li:nth-child(3)::before{color:#a5734a;}
+.rank-list b{font-size:.92rem;}
+.rank-list small{color:var(--ink-mute);font-size:.78rem;display:block;font-weight:400;}
+.rank-list span{font-family:var(--font-mono);font-size:.8rem;color:var(--brand);white-space:nowrap;}
+
+/* 相关推荐 */
+.reco-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
+.reco-grid a{
+  display:block;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-s);
+  padding:10px 14px;font-size:.9rem;color:var(--ink);
+}
+.reco-grid a small{display:block;font-size:.76rem;color:var(--ink-mute);margin-top:2px;}
+.reco-grid a:hover{border-color:var(--accent);text-decoration:none;}
+
+/* 相关资讯 */
+.news-list{list-style:none;padding:0;}
+.news-list li{padding:12px 0;border-bottom:1px solid var(--line);}
+.news-list li:last-child{border-bottom:0;}
+.news-list a{font-weight:600;font-size:.95rem;}
+.news-list p{font-size:.84rem;color:var(--ink-mute);margin:4px 0 0;}
+
+/* 侧栏 */
+.side-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-m);padding:var(--space-3);box-shadow:var(--shadow-s);}
+.side-card h3{font-size:.95rem;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--line);}
+.side-nav{list-style:none;padding:0;margin:0;display:grid;gap:2px;}
+.side-nav a{
+  display:block;font-size:.87rem;color:var(--ink-soft);padding:6px 10px;border-radius:4px;
+  border-left:2px solid transparent;
+}
+.side-nav a:hover{background:var(--bg);text-decoration:none;}
+.side-nav a.active{background:var(--brand-soft);color:var(--brand-dark);border-left-color:var(--brand);font-weight:600;}
+.side-tip{font-size:.82rem;color:var(--ink-soft);}
+.side-tip dt{font-weight:700;color:var(--ink);margin-top:8px;}
+.side-tip dd{margin:0 0 4px;}
+
+/* 页尾 */
+.site-footer{background:#221f1e;color:#cfc9c4;padding:var(--space-5) 0 var(--space-3);font-size:.88rem;}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:var(--space-4);padding-bottom:var(--space-4);border-bottom:1px solid #3a3532;}
+.footer-brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800;font-size:1.05rem;margin-bottom:10px;}
+.footer-brand svg{width:32px;height:32px;}
+.footer-top p{color:#a49d98;margin:0;font-size:.85rem;}
+.footer-col h4{color:#fff;font-size:.9rem;margin-bottom:10px;}
+.footer-col ul{list-style:none;padding:0;margin:0;display:grid;gap:6px;}
+.footer-col a{color:#b8b1ac;font-size:.85rem;}
+.footer-col a:hover{color:#fff;}
+.footer-bottom{padding-top:var(--space-3);display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center;font-size:.8rem;color:#8e8781;}
+.footer-bottom .dot-sep{opacity:.4;}
+
+#toTop{
+  position:fixed;right:18px;bottom:20px;z-index:70;width:44px;height:44px;border-radius:50%;
+  background:var(--brand);color:#fff;border:0;cursor:pointer;box-shadow:var(--shadow-m);
+  display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;
+  transition:opacity .2s,transform .2s;
+}
+#toTop.show{opacity:1;pointer-events:auto;}
+#toTop:hover{transform:translateY(-2px);}
+#toTop svg{width:18px;height:18px;}
+
+.highlight-hit{outline:2px solid var(--gold);outline-offset:4px;border-radius:4px;transition:outline-color .4s;}
+
+@media (max-width:1024px){
+  .layout{grid-template-columns:1fr;}
+  aside{position:static;display:grid;grid-template-columns:1fr 1fr;}
+  .hero .wrap{grid-template-columns:1fr;padding-top:var(--space-5);}
+  .hero-visual{justify-self:center;max-width:360px;}
+  .footer-top{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:760px){
+  .wrap{width:min(1160px,100% - 28px);}
+  .main-nav{
+    position:fixed;top:calc(var(--sticky-offset));left:0;right:0;
+    background:#fff;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;
+    padding:10px 14px 16px;gap:2px;box-shadow:var(--shadow-m);
+    display:none;z-index:55;
+  }
+  .main-nav.open{display:flex;}
+  .main-nav a{padding:11px 12px;font-size:.95rem;}
+  .nav-toggle{display:block;}
+  .header-actions .search-box input{width:130px;}
+  .header-actions .search-box input:focus{width:150px;}
+  .overview-grid{grid-template-columns:1fr;}
+  .feature-grid{grid-template-columns:1fr;}
+  .cat-grid{grid-template-columns:1fr 1fr;}
+  .compare{grid-template-columns:1fr;}
+  .reco-grid{grid-template-columns:1fr;}
+  .hero-facts{grid-template-columns:repeat(3,1fr);}
+  aside{grid-template-columns:1fr;}
+  .deep{padding:var(--space-4) var(--space-3);border-radius:var(--radius-m);}
+  .rank-list li{grid-template-columns:32px 1fr;gap:10px;}
+  .rank-list li span{grid-column:2;justify-self:start;}
+  .footer-top{grid-template-columns:1fr 1fr;gap:var(--space-3);}
+  #toTop{right:12px;bottom:14px;width:40px;height:40px;}
+}
+@media (max-width:420px){
+  .header-actions .search-box{display:none;}
+  .cat-grid{grid-template-columns:1fr;}
+  .term-list{grid-template-columns:1fr;}
+  .footer-top{grid-template-columns:1fr;}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  *,*::before,*::after{transition:none!important;animation:none!important;}
+  .card:hover,.btn:hover{transform:none;}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="announce" role="region" aria-label="站点更新公告">
+  <div class="wrap">
+    <span class="tag">更新</span>
+    <span class="txt">2026-11-08 · <b>作品索引库</b>新增 6 条编号条目，<b>迅雷离线下载</b>说明页同步补充哈希校验字段；本周问答已收录 4 个新问题。</span>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/#top" aria-label="返回首页">
+      <svg class="brand-logo" viewBox="0 0 64 64" aria-hidden="true" fill="none">
+        <rect width="64" height="64" rx="14" fill="#b3253c"/>
+        <path d="M32 11v27m0 0-9.5-9.5M32 38l9.5-9.5" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="17" y="45" width="30" height="5" rx="2.5" fill="#fff" opacity=".85"/>
+        <circle cx="32" cy="32" r="24" stroke="#fff" stroke-opacity=".28" stroke-width="1.5"/>
+      </svg>
+      <span class="brand-name">结衣波多野种子迅雷</span>
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="主题导航">
+      <a href="/#overview">领域概览</a>
+      <a href="/#feature">精选推荐</a>
+      <a href="/#updates">最新更新</a>
+      <a href="/#categories">分类入口</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#guide">体验指南</a>
+      <a href="/#faq">常见问答</a>
+      <a href="/#comments">用户评论</a>
+      <a href="/#more">相关资讯</a>
+    </nav>
+    <div class="header-actions">
+      <div class="search-box">
+        <input id="siteSearch" type="search" placeholder="搜索条目、编号、关键词" aria-label="站内搜索" autocomplete="off">
+        <div class="search-feedback" id="searchFeedback" role="status" aria-live="polite"></div>
+      </div>
+      <button class="btn small" type="button" id="searchBtn">查找</button>
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="mainNav" aria-label="展开或收起菜单">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="hero-badge"><span class="dot"></span>资源检索 · 下载方式 · 条目核对</span>
+      <h1>结衣波多野种子迅雷</h1>
+      <p class="hero-sub">把零散的番号、磁力链接与迅雷任务串成一条可核对的路径：先确认作品编号，再比对文件体积与时长，最后决定用离线还是常规下载。<em>2026 年 11 月索引</em>共收录 428 条可校验条目。</p>
+      <div class="hero-actions">
+        <a class="btn" href="/#feature">进入精选条目</a>
+        <a class="btn ghost" href="/#guide">查看下载步骤</a>
+      </div>
+      <div class="hero-facts">
+        <div><strong>428</strong><span>可校验条目</span></div>
+        <div><strong>37</strong><span>收录作品系列</span></div>
+        <div><strong>6</strong><span>本周新增编号</span></div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="hg1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#b3253c" stop-opacity=".16"/>
+            <stop offset="1" stop-color="#1f5f6b" stop-opacity=".12"/>
+          </linearGradient>
+          <linearGradient id="hg2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#b3253c"/>
+            <stop offset="1" stop-color="#8c1a2d"/>
+          </linearGradient>
+        </defs>
+        <circle cx="200" cy="200" r="172" fill="url(#hg1)"/>
+        <circle cx="200" cy="200" r="172" stroke="#e3ded8" stroke-width="1.5"/>
+        <circle cx="200" cy="200" r="128" stroke="#e3ded8" stroke-width="1" stroke-dasharray="4 7"/>
+        <path d="M200 96v104m0 0-30-30m30 30 30-30" stroke="url(#hg2)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="140" y="248" width="120" height="14" rx="7" fill="#b3253c" opacity=".22"/>
+        <rect x="156" y="274" width="88" height="10" rx="5" fill="#1f5f6b" opacity=".2"/>
+        <circle cx="304" cy="108" r="9" fill="#a8802a"/>
+        <circle cx="96" cy="286" r="7" fill="#1f5f6b"/>
+        <circle cx="318" cy="282" r="5" fill="#b3253c"/>
+        <rect x="52" y="70" width="58" height="8" rx="4" fill="#e3ded8"/>
+        <rect x="52" y="86" width="36" height="8" rx="4" fill="#e3ded8"/>
+        <rect x="292" y="330" width="58" height="8" rx="4" fill="#e3ded8"/>
+      </svg>
+      <div class="float-card fc1"><b>编号核对</b>KY-114 与 KY-117 已校验</div>
+      <div class="float-card fc2"><b>离线状态</b>3 个任务已完成</div>
+    </div>
+  </div>
+</section>
+
+<div class="channels" aria-label="热门频道">
+  <div class="wrap">
+    <a href="/#categories">番号索引</a>
+    <a href="/#categories">磁力链接核对</a>
+    <a href="/#categories">迅雷离线任务</a>
+    <a href="/#categories">1080p 原盘</a>
+    <a href="/#categories">4K 修复版</a>
+    <a href="/#categories">中文字幕封装</a>
+    <a href="/#categories">无码流出版</a>
+    <a href="/#categories">合集打包</a>
+    <a href="/#categories">播放器解码</a>
+    <a href="/#categories">哈希校验</a>
+    <a href="/#categories">文件体积对照</a>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="layout">
+    <main>
+
+      <!-- 领域概览 -->
+      <section class="block" id="overview">
+        <div class="block-head">
+          <h2>领域概览：番号、磁力链接与下载工具的关系</h2>
+          <span class="hint">先弄清三个概念，再谈检索</span>
+        </div>
+        <div class="overview-grid">
+          <div class="overview-main">
+            <p>相关作品在网络上流通时，通常先有一个发行方给出的作品编号（业内称番号），再由不同发布者制作成种子文件或磁力链接。迅雷只是承接这两种载体的下载工具之一，它本身不生产资源。</p>
+            <p>番号是唯一稳定的锚点。以常见的「ABC-123」格式为例，前缀代表厂牌，数字代表该厂牌下的第几部作品。前缀拼错一个字母，搜出来的结果可能完全无关。日期字段则用来区分同一编号下的不同发行批次。</p>
+            <p>磁力链接以 <code style="font-family:var(--font-mono);font-size:.85em;background:var(--bg);padding:1px 5px;border-radius:3px;">magnet:?xt=urn:btih:</code> 开头，后面跟一段 40 位十六进制哈希。哈希是文件内容的指纹，不包含文件名。种子文件则把分片表、Tracker 地址一起打包，体积通常在几十 KB 到几百 KB 之间。</p>
+            <ul class="term-list">
+              <li><b>番号</b>：厂牌前缀加流水号</li>
+              <li><b>哈希</b>：40 位十六进制内容指纹</li>
+              <li><b>Tracker</b>：协助 peer 互相发现的服务器</li>
+              <li><b>做种</b>：完整持有文件并对外提供分片</li>
+              <li><b>离线下载</b>：云端先下完再转存本地</li>
+              <li><b>分片</b>：文件被切成的传输单元</li>
+              <li><b>封装</b>：MKV、MP4 等容器格式</li>
+              <li><b>码率</b>：单位时间的数据量，决定画质</li>
+            </ul>
+          </div>
+          <div class="overview-side">
+            <div class="mini-panel">
+              <h3>三个容易混淆的点</h3>
+              <p>标题相同不代表文件相同；同一番号的 720p 与 1080p 是两个独立哈希；离线下载完成不等于本地已下载。</p>
+            </div>
+            <div class="mini-panel" style="background:var(--accent-soft);">
+              <h3>判断顺序建议</h3>
+              <p>番号 → 发行日期 → 文件体积 → 时长 → 封面缩略图。前三项一致时，误判概率已经很低。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 精选推荐 -->
+      <section class="block" id="feature">
+        <div class="block-head">
+          <h2>精选内容推荐：本周可校验的六个条目</h2>
+          <span class="hint">均标注哈希前八位，便于自行比对</span>
+        </div>
+        <div class="feature-grid">
+          <article class="card">
+            <img class="thumb" src="https://picsum.photos/seed/ky114cover/640/360" width="640" height="360" loading="lazy" alt="KY-114 作品封面缩略图，深色背景与竖排标题">
+            <div class="card-body">
+              <h3>KY-114 1080p 中文字幕封装版</h3>
+              <p>2026-10-21 发行，时长 118 分钟，MKV 封装内嵌简体字幕。哈希前八位 <code>a3f9c2e1</code>，文件 4.2GB。</p>
+              <div class="meta-row"><span>1080p</span><span>4.2GB</span><span>内嵌字幕</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <img class="thumb" src="https://picsum.photos/seed/ky117rip/640/360" width="640" height="360" loading="lazy" alt="KY-117 修复版画面截图，暖色调室内场景">
+            <div class="card-body">
+              <h3>KY-117 4K 修复版磁力链接</h3>
+              <p>2026-10-29 上架，基于原始胶片扫描重制，H.265 编码，体积 16.8GB。老设备解码可能吃力。</p>
+              <div class="meta-row"><span>4K</span><span>16.8GB</span><span>H.265</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <img class="thumb" src="https://picsum.photos/seed/ky120set/640/360" width="640" height="360" loading="lazy" alt="KY-120 合集封面，三张画面并排排列">
+            <div class="card-body">
+              <h3>KY-120 三部曲合集打包</h3>
+              <p>含 2025 至 2026 年三个编号，分文件独立哈希。适合按系列整理，不适合只要单部的人。</p>
+              <div class="meta-row"><span>合集</span><span>3 文件</span><span>独立哈希</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <img class="thumb" src="https://picsum.photos/seed/ky122sub/640/360" width="640" height="360" loading="lazy" alt="KY-122 外挂字幕文件示意，字幕列表界面">
+            <div class="card-body">
+              <h3>KY-122 外挂字幕与调轴说明</h3>
+              <p>原盘无字幕，社区于 2026-11-02 发布 SRT 与 ASS 两版，帧率 23.976，需手动调轴 1.2 秒。</p>
+              <div class="meta-row"><span>外挂字幕</span><span>23.976fps</span><span>调轴</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <img class="thumb" src="https://picsum.photos/seed/ky109old/640/360" width="640" height="360" loading="lazy" alt="KY-109 早期作品画面，画质偏柔和">
+            <div class="card-body">
+              <h3>KY-109 早期作品补档情况</h3>
+              <p>2019 年发行，原始源已稀少。当前只剩两个活跃种子，做种数分别为 3 与 1，速度不稳定。</p>
+              <div class="meta-row"><span>补档</span><span>做种 3</span><span>720p</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <img class="thumb" src="https://picsum.photos/seed/ky125new/640/360" width="640" height="360" loading="lazy" alt="KY-125 新作封面，冷色调构图">
+            <div class="card-body">
+              <h3>KY-125 新作首发信息核对</h3>
+              <p>2026-11-05 发行，首发种子 24 小时内做种数升至 41。文件名含 <code>[1080p][x264]</code> 标记。</p>
+              <div class="meta-row"><span>新作</span><span>做种 41</span><span>x264</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 最新更新 -->
+      <section class="block" id="updates">
+        <div class="block-head">
+          <h2>最新更新：索引库与说明页的变动记录</h2>
+          <span class="hint">按日期倒序，可逐条对照</span>
+        </div>
+        <ul class="update-list">
+          <li>
+            <time>2026-11-08</time>
+            <b>新增 6 条编号条目</b>
+            <span>包含 KY-125 首发信息、KY-126 预告编号占位，以及 4 条补档来源说明。</span>
+          </li>
+          <li>
+            <time>2026-11-06</time>
+            <b>迅雷离线下载说明页补充哈希校验字段</b>
+            <span>在任务详情中新增「哈希前八位」展示，方便与索引库条目比对。</span>
+          </li>
+          <li>
+            <time>2026-11-03</time>
+            <b>KY-122 外挂字幕上架</b>
+            <span>社区发布 SRT 与 ASS 两版，标注帧率 23.976，附调轴 1.2 秒的说明。</span>
+          </li>
+          <li>
+            <time>2026-10-30</time>
+            <b>文件体积对照表修订</b>
+            <span>补入 4K 修复版区间 14 至 18GB，并区分 H.264 与 H.265 编码的体积差异。</span>
+          </li>
+          <li>
+            <time>2026-10-24</time>
+            <b>播放器解码问题汇总更新</b>
+            <span>收录 MKV 无法播放的 5 类原因，其中 3 类与解码器版本直接相关。</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 分类入口 -->
+      <section class="block" id="categories">
+        <div class="block-head">
+          <h2>分类入口：按检索习惯划分的十一个频道</h2>
+          <span class="hint">括号内为当前条目数</span>
+        </div>
+        <div class="cat-grid">
+          <a href="/#feature">番号索引 <small>428</small></a>
+          <a href="/#guide">磁力链接核对 <small>312</small></a>
+          <a href="/#guide">迅雷离线任务 <small>96</small></a>
+          <a href="/#more">1080p 原盘 <small>187</small></a>
+          <a href="/#more">4K 修复版 <small>42</small></a>
+          <a href="/#feature">中文字幕封装 <small>153</small></a>
+          <a href="/#deep">哈希校验方法 <small>8</small></a>
+          <a href="/#deep">文件体积对照 <small>11</small></a>
+          <a href="/#faq">播放器解码 <small>7</small></a>
+          <a href="/#comments">补档与做种 <small>64</small></a>
+          <a href="/#more">合集打包 <small>29</small></a>
+        </div>
+      </section>
+
+      <!-- 深度解析 -->
+      <section class="block deep" id="deep">
+        <div class="block-head">
+          <h2>深度解析：做种数不是下载速度的唯一变量</h2>
+        </div>
+        <p class="lede">一个被反复引用的说法是「做种数越多，迅雷下载越快」。这个判断在 2026 年的网络环境下只对了一半，剩下的一半取决于连接类型、离线缓存和对方客户端的限速策略。</p>
+
+        <h3>案例时间线：KY-125 首发 72 小时</h3>
+        <ul class="timeline-mini">
+          <li><time>11-05 20:00</time><span>首发种子发布，做种数 1，下载完成耗时约 6 小时。</span></li>
+          <li><time>11-06 08:00</time><span>做种数升至 17，但同日 14 时出现下载速度从 8MB/s 跌至 900KB/s 的记录。</span></li>
+          <li><time>11-06 21:00</time><span>迅雷离线任务命中缓存，第二轮下载在 11 分钟内完成。</span></li>
+          <li><time>11-08 10:00</time><span>做种数 41，新用户首次下载平均速度约 3.1MB/s，低于离线转存。</span></li>
+        </ul>
+        <p>同样是 11 月 6 日，做种数从 1 涨到 17，速度却没有线性上升。原因在于做种者的上传带宽是分散的，且部分客户端对非本客户端 peer 设了连接上限。做种数是「有多少人愿意提供」，不是「有多少带宽可用」。</p>
+
+        <div class="verdict">
+          <b>可被反驳的判断：</b>在条目发布后的前 48 小时，离线下载的完成速度通常快于 P2P 直连，因为云端缓存命中率高；但超过 72 小时、做种数稳定在 30 以上后，两者差距会缩小到 20% 以内。若有人拿出反例，最可能出现在冷门老条目上——那类条目离线缓存往往根本没有。
+        </div>
+
+        <h3>数据对比：三种体积区间的实际耗时</h3>
+        <table class="cmp">
+          <thead>
+            <tr><th>体积区间</th><th>P2P 直连（做种 20）</th><th>离线转存</th><th>主要瓶颈</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1—2GB</td><td>约 9 分钟</td><td>约 3 分钟</td><td>本地磁盘写入</td></tr>
+            <tr><td>3—6GB</td><td>约 26 分钟</td><td>约 7 分钟</td><td>对方上传带宽</td></tr>
+            <tr><td>14—18GB</td><td>约 95 分钟</td><td>约 22 分钟</td><td>离线缓存命中与否</td></tr>
+          </tbody>
+        </table>
+        <p>表内数据取自 2026 年 10 月 26 日至 11 月 4 日的 37 次下载记录，宽带为 500Mbps 下行。4K 修复版的差距最大，因为单文件分片多，P2P 连接数在高分片场景下更容易被限制。</p>
+
+        <h3>说法差异：「无速度」到底意味着什么</h3>
+        <p>论坛里常见的描述是「离线下载卡在 0%」。这里的 0% 有两种含义：一是云端尚未拿到任何完整分片，二是云端已有资源但在转存队列中排队。前者需要换源，后者只需要等。迅雷客户端在 2026 年 9 月后的版本里，把这两种状态分别显示为「等待资源」和「排队中」，但部分旧版仍统一显示为「等待中」。</p>
+        <p>根据用户提交的 14 条反馈，把「排队中」误判为「无资源」并重新提交任务的比例接近一半。重复提交不会加速，反而可能触发短时间内的任务数限制。可核对的判断方法是：看任务详情里的「云端进度」字段，若大于 0，说明有缓存，只是没轮到转存。</p>
+
+        <h3>规则前后变化：哈希校验从可选变成默认</h3>
+        <p>2026 年 10 月之前，迅雷的任务详情页不展示哈希，用户只能靠文件名判断。10 月中旬的版本更新后，哈希前八位变为默认可见。这一改动直接影响核对流程：过去要借助第三方工具算哈希，现在两步就能比对。对索引库而言，这意味着条目描述里的哈希字段从「补充信息」变成了「主校验位」。</p>
+      </section>
+
+      <!-- 体验指南 -->
+      <section class="block" id="guide">
+        <div class="block-head">
+          <h2>体验指南：从番号到可播放文件的五步</h2>
+          <span class="hint">每步都有明确的完成标志</span>
+        </div>
+        <ol class="steps">
+          <li><b>确认番号格式</b><span>厂牌前缀大写、连字符、三位数字，例如 KY-114。前缀大小写不敏感，但连字符不能省。</span></li>
+          <li><b>比对磁力链接哈希</b><span>在任务详情页看哈希前八位，与索引条目记录是否一致。不一致就不要继续下载。</span></li>
+          <li><b>选择下载方式</b><span>新条目优先试离线转存；超过 90 天的老条目直接 P2P，避免排队空等。</span></li>
+          <li><b>下载后核对体积</b><span>文件大小与条目描述的偏差超过 5% 时，多半是下载未完成或源被替换。</span></li>
+          <li><b>播放前检查封装</b><span>MKV 需要较新的解码器，MP4 兼容性更好。字幕不对轨时先查帧率字段。</span></li>
+        </ol>
+      </section>
+
+      <!-- 对照面板 -->
+      <section class="block" id="compare">
+        <div class="block-head">
+          <h2>下载方式对照：离线转存与直连各适合谁</h2>
+        </div>
+        <div class="compare">
+          <div class="pane hi">
+            <h3>迅雷离线转存</h3>
+            <ul>
+              <li>命中缓存时最快，4K 文件优势明显</li>
+              <li>不依赖当前做种数</li>
+              <li>冷门条目可能长期排队</li>
+              <li>需要账号与相应权限</li>
+            </ul>
+          </div>
+          <div class="pane">
+            <h3>P2P 直连</h3>
+            <ul>
+              <li>不依赖云端缓存，任何种子都能试</li>
+              <li>速度受做种数与对方限速影响</li>
+              <li>大文件耗时长，断点续传要开</li>
+              <li>适合刚发布、做种活跃的新条目</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 标签索引 -->
+      <section class="block" id="tags">
+        <div class="block-head">
+          <h2>相关推荐标签：按检索词直接进入</h2>
+        </div>
+        <div class="tag-cloud">
+          <a class="hot" href="/#feature">KY-125 首发资源</a>
+          <a href="/#feature">KY-117 4K 修复版</a>
+          <a href="/#feature">KY-114 中文字幕</a>
+          <a href="/#deep">磁力链接哈希校验</a>
+          <a href="/#deep">迅雷离线缓存命中</a>
+          <a href="/#guide">种子文件体积对照</a>
+          <a href="/#faq">MKV 无法播放</a>
+          <a href="/#comments">KY-109 补档</a>
+          <a href="/#more">三部曲合集打包</a>
+          <a href="/#faq">外挂字幕调轴</a>
+          <a href="/#updates">本周新增编号</a>
+          <a href="/#deep">做种数与下载速度</a>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="block faq" id="faq">
+        <div class="block-head">
+          <h2>常见问答：检索与下载中的高频疑问</h2>
+        </div>
+        <details open>
+          <summary>磁力链接与种子文件有什么区别？</summary>
+          <div class="ans">磁力链接只包含哈希指纹，不携带文件内容，占用极小；种子文件是完整的 torrent 描述文件，内含分片信息和 Tracker 地址，打开后即可开始下载。迅雷对两者都支持，磁力链接无需先下载文件。</div>
+        </details>
+        <details>
+          <summary>迅雷离线下载为什么有时显示无速度？</summary>
+          <div class="ans">离线下载依赖服务器端已有资源。当哈希对应的文件在云端不存在、且近期无其他用户提交时，任务会停留在等待状态，界面显示零速度。此时可更换同类资源，或改用非离线模式。</div>
+        </details>
+        <details>
+          <summary>同一部作品为什么会有多个不同文件体积？</summary>
+          <div class="ans">体积差异主要来自画质参数与封装格式。720p 常见于 1 至 2GB，1080p 多在 3 至 6GB，4K 修复版可达 15GB 以上。另外字幕是否内嵌、是否剪去片头也会影响最终大小。</div>
+        </details>
+        <details>
+          <summary>如何确认一个资源条目与作品是对应的？</summary>
+          <div class="ans">先核对发行方公布的番号或作品编号，再看种子文件名中的日期与时长字段，最后对照封面缩略图。三项一致基本可确认对应关系，仅有标题文字相同不足以判断。</div>
+        </details>
+        <details>
+          <summary>下载后无法播放该怎么排查？</summary>
+          <div class="ans">先看文件扩展名与播放器支持的解码格式，MKV 封装常需更新解码器；再检查文件大小是否与种子描述一致，明显偏小说明下载未完成。若均正常，可尝试以 VLC 打开。</div>
+        </details>
+        <details>
+          <summary>外挂字幕不同步，调轴有通用参数吗？</summary>
+          <div class="ans">没有通用参数。23.976 帧率的片源配 25 帧字幕，每秒大约差 0.04 秒，两小时累计偏差接近 5 秒。常见做法是先按帧率换算整体平移，再逐段微调，KY-122 的社区字幕标注了 1.2 秒的固定偏移。</div>
+        </details>
+      </section>
+
+      <!-- 用户评论 -->
+      <section class="block" id="comments">
+        <div class="block-head">
+          <h2>用户评论：关于具体条目的使用反馈</h2>
+          <span class="hint">含中性评价与吐槽，按时间排列</span>
+        </div>
+        <div class="comments">
+          <div class="comment">
+            <div class="comment-head"><span class="avatar">阿</span><b>阿澄</b><time>2026-11-08 09:12</time></div>
+            <p>KY-125 首发第二天就拿了离线，11 分钟转存完成，比我自己挂着下快太多。不过文件名里没写 x264 还是 x265，得下完才知道。</p>
+            <span class="ref">指向 KY-125 条目</span>
+          </div>
+          <div class="comment">
+            <div class="comment-head"><span class="avatar">木</span><b>木野</b><time>2026-11-07 22:40</time></div>
+            <p>KY-109 那个只剩 3 个做种的条目，挂了三个晚上才到 61%，中途还断过一次。老片补档这种事真急不来。</p>
+            <span class="ref">指向 KY-109 补档</span>
+          </div>
+          <div class="comment">
+            <div class="comment-head"><span class="avatar">Q</span><b>QuietDay</b><time>2026-11-07 14:02</time></div>
+            <p>4K 修复版的体积标注挺准，16.8GB 下完一分不差。但 H.265 在旧笔记本上放起来卡成幻灯片，最后换回 1080p。</p>
+            <span class="ref">指向 KY-117 4K 版</span>
+          </div>
+          <div class="comment">
+            <div class="comment-head"><span class="avatar">半</span><b>半盏茶</b><time>2026-11-06 19:35</time></div>
+            <p>说做种数多就一定快的，可以看看 11 月 6 号下午的情况。那天做种涨了，速度反而掉到 900KB 左右。别只盯着一个数字。</p>
+          </div>
+          <div class="comment">
+            <div class="comment-head"><span class="avatar">林</span><b>林间小径</b><time>2026-11-05 11:20</time></div>
+            <p>KY-122 的字幕调轴说明写得很细，按 1.2 秒平移后基本对上了。就是 ASS 那版字体太花，看着累，换回 SRT 清爽些。</p>
+            <span class="ref">指向 KY-122 字幕</span>
+          </div>
+          <div class="comment">
+            <div class="comment-head"><span class="avatar">V</span><b>Vega_07</b><time>2026-11-04 23:48</time></div>
+            <p>合集打包那三条我只要中间一部，结果还是得整包下。能不能单独拆开，这点体验一般。</p>
+            <span class="ref">指向 KY-120 合集</span>
+          </div>
+          <div class="comment">
+            <div class="comment-head"><span class="avatar">石</span><b>石阶</b><time>2026-11-03 16:05</time></div>
+            <p>哈希前八位能直接看到之后，核对快多了。以前还要开小工具算一遍，现在两步搞定。这个改动实用。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 相关资讯 -->
+      <section class="block" id="more">
+        <div class="block-head">
+          <h2>相关资讯：版本、格式与发布节奏</h2>
+        </div>
+        <ul class="news-list">
+          <li>
+            <a href="/#deep">迅雷 2026 年 10 月版本更新：任务详情默认展示哈希</a>
+            <p>更新后可在任务面板直接看到哈希前八位，核对流程从三步压缩到两步。</p>
+          </li>
+          <li>
+            <a href="/#feature">KY-126 预告编号占位，预计 11 月下旬发行</a>
+            <p>厂牌官网已挂出预告页，暂无种子。索引库先建占位条目，避免与近似编号混淆。</p>
+          </li>
+          <li>
+            <a href="/#faq">H.265 在旧设备上的解码表现测试汇总</a>
+            <p>五款播放器在 2018 年前后的笔记本上跑 4K 修复版，三款出现明显掉帧。</p>
+          </li>
+          <li>
+            <a href="/#comments">冷门老条目的做种衰减：以 KY-109 为例</a>
+            <p>2019 年发行的作品，活跃做种从年初的 9 个降至当前的 3 个。</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 榜单 -->
+      <section class="block" id="rank">
+        <div class="block-head">
+          <h2>本周热度榜：按离线转存次数排序</h2>
+          <span class="hint">统计区间 2026-11-01 至 11-08</span>
+        </div>
+        <ol class="rank-list">
+          <li><div><b>KY-125 新作首发</b><small>11-05 发行，离线转存 218 次</small></div><span>218</span></li>
+          <li><div><b>KY-117 4K 修复版</b><small>H.265 编码，平均转存耗时 22 分钟</small></div><span>164</span></li>
+          <li><div><b>KY-114 中文字幕版</b><small>内嵌字幕，1080p 4.2GB</small></div><span>139</span></li>
+          <li><div><b>KY-120 三部曲合集</b><small>整包转存占比 87%</small></div><span>96</span></li>
+          <li><div><b>KY-122 外挂字幕原盘</b><small>字幕发布后转存上升 41 次</small></div><span>73</span></li>
+        </ol>
+      </section>
+
+    </main>
+
+    <aside aria-label="侧栏">
+      <div class="side-card">
+        <h3>本页目录</h3>
+        <ul class="side-nav" id="sideNav">
+          <li><a href="/#overview">领域概览</a></li>
+          <li><a href="/#feature">精选内容推荐</a></li>
+          <li><a href="/#updates">最新更新</a></li>
+          <li><a href="/#categories">分类入口</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#compare">下载方式对照</a></li>
+          <li><a href="/#faq">常见问答</a></li>
+          <li><a href="/#comments">用户评论</a></li>
+          <li><a href="/#more">相关资讯</a></li>
+          <li><a href="/#rank">本周热度榜</a></li>
+        </ul>
+      </div>
+      <div class="side-card">
+        <h3>快速自查</h3>
+        <dl class="side-tip">
+          <dt>哈希对不上</dt>
+          <dd>换一个来源，不要继续下载</dd>
+          <dt>离线 0%</dt>
+          <dd>先看云端进度是否大于 0</dd>
+          <dt>MKV 打不开</dt>
+          <dd>更新解码器或换 VLC</dd>
+          <dt>字幕不同步</dt>
+          <dd>核对帧率，再整体平移</dd>
+        </dl>
+      </div>
+      <div class="side-card" style="background:var(--brand-soft);border-color:#f0c4cc;">
+        <h3 style="border-bottom-color:#f0c4cc;">更新说明</h3>
+        <p style="font-size:.85rem;color:var(--ink-soft);margin:0;">索引库最后核对时间为 2026-11-08 10:30，对应正文「最新更新」前两条记录。</p>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <svg viewBox="0 0 64 64" aria-hidden="true" fill="none">
+            <rect width="64" height="64" rx="14" fill="#b3253c"/>
+            <path d="M32 11v27m0 0-9.5-9.5M32 38l9.5-9.5" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="17" y="45" width="30" height="5" rx="2.5" fill="#fff" opacity=".85"/>
+          </svg>
+          结衣波多野种子迅雷
+        </div>
+        <p>以番号与哈希为锚点，整理作品条目的检索路径与下载方式说明。所有条目均为示例数据，用于演示核对流程。</p>
+      </div>
+      <div class="footer-col">
+        <h4>检索</h4>
+        <ul>
+          <li><a href="/#feature">番号索引</a></li>
+          <li><a href="/#categories">磁力链接核对</a></li>
+          <li><a href="/#guide">迅雷离线任务</a></li>
+          <li><a href="/#deep">哈希校验方法</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>内容</h4>
+        <ul>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">常见问答</a></li>
+          <li><a href="/#comments">用户评论</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>动态</h4>
+        <ul>
+          <li><a href="/#updates">最新更新</a></li>
+          <li><a href="/#more">相关资讯</a></li>
+          <li><a href="/#rank">本周热度榜</a></li>
+          <li><a href="/#tags">推荐标签</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>页面更新：2026-11-08</span>
+      <span class="dot-sep">·</span>
+      <span>示例数据说明：番号、哈希、体积、做种数均为演示用生成内容，不指向真实可下载资源</span>
+      <span class="dot-sep">·</span>
+      <span>© 2026 条目索引整理组</span>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" type="button" aria-label="回到顶部">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script>
+(function(){
+  var navToggle = document.getElementById('navToggle');
+  var mainNav = document.getElementById('mainNav');
+  navToggle.addEventListener('click', function(){
+    var open = mainNav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  mainNav.addEventListener('click', function(e){
+    if (e.target.tagName === 'A' && window.innerWidth <= 760){
+      mainNav.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  var toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', function(){
+    toTop.classList.toggle('show', window.scrollY > 480);
+  }, {passive:true});
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  var searchInput = document.getElementById('siteSearch');
+  var feedback = document.getElementById('searchFeedback');
+  var searchBtn = document.getElementById('searchBtn');
+
+  function runSearch(){
+    var q = (searchInput.value || '').trim();
+    if (!q){
+      feedback.innerHTML = '请输入番号、关键词或哈希前八位。';
+      feedback.classList.add('open');
+      return;
+    }
+    var paras = document.querySelectorAll('main p, main h3, main li, main summary, main .meta-row span');
+    var hit = null;
+    for (var i = 0; i < paras.length; i++){
+      if (paras[i].textContent.toLowerCase().indexOf(q.toLowerCase()) !== -1){
+        hit = paras[i];
+        break;
+      }
+    }
+    if (hit){
+      var box = hit.closest('section') || hit;
+      box.classList.add('highlight-hit');
+      feedback.innerHTML = '找到与 <b>' + q.replace(/[<>&]/g,'') + '</b> 相关的内容，已定位到「' + (box.querySelector('h2') ? box.querySelector('h2').textContent.slice(0,16) : '条目') + '」。';
+      feedback.classList.add('open');
+      box.scrollIntoView({behavior:'smooth', block:'start'});
+      setTimeout(function(){ box.classList.remove('highlight-hit'); }, 2400);
+    } else {
+      feedback.innerHTML = '没有找到与 <b>' + q.replace(/[<>&]/g,'') + '</b> 匹配的内容。可改试番号前缀，如 KY-125，或频道名「离线下载」。';
+      feedback.classList.add('open');
+    }
+  }
+
+  searchBtn.addEventListener('click', runSearch);
+  searchInput.addEventListener('keydown', function(e){
+    if (e.key === 'Enter'){ e.preventDefault(); runSearch(); }
+  });
+  document.addEventListener('click', function(e){
+    if (!feedback.contains(e.target) && e.target !== searchInput && e.target !== searchBtn){
+      feedback.classList.remove('open');
+    }
+  });
+
+  var sideLinks = Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var sections = sideLinks.map(function(a){
+    var id = a.getAttribute('href').replace('/#','');
+    return document.getElementById(id);
+  });
+  function updateActive(){
+    var pos = window.scrollY + 140;
+    var current = -1;
+    sections.forEach(function(sec, idx){
+      if (sec && sec.offsetTop <= pos) current = idx;
+    });
+    sideLinks.forEach(function(a, idx){
+      a.classList.toggle('active', idx === current);
+    });
+  }
+  window.addEventListener('scroll', updateActive, {passive:true});
+  window.addEventListener('load', updateActive);
+  updateActive();
+})();
+</script>
+</body>
+          </html>
