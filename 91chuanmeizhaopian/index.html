@@ -1,0 +1,928 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>91传媒照片-影像档案与拍摄现场记录</title>
+<meta name="description" content="91传媒照片档案库，收录棚拍、外景与活动跟拍的落地记录，梳理拍摄时间、机型参数、出片数量与后期流程，附体验指南、深度解析与真实评论，帮你看懂一组照片是怎么拍出来的。">
+<meta name="keywords" content="91传媒照片">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b2a4a'/%3E%3Crect x='12' y='20' width='40' height='28' rx='5' fill='none' stroke='%23f2b032' stroke-width='3'/%3E%3Ccircle cx='32' cy='34' r='8' fill='none' stroke='%23f2b032' stroke-width='3'/%3E%3Crect x='22' y='14' width='12' height='6' rx='2' fill='%23f2b032'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"91传媒照片","description":"91传媒照片档案库，记录棚拍、外景与活动跟拍的拍摄参数与出片流程。","inLanguage":"zh-CN"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"91传媒照片里常说的棚拍三灯组具体怎么摆？","acceptedAnswer":{"@type":"Answer","text":"主灯在模特左前45度，功率约占总光比七成；辅灯在右侧补一档半；轮廓灯从后方30度打头发边缘。三只灯都用柔光箱时，色温统一设5600K，避免后期拉不回来。"}},
+{"@type":"Question","name":"外景照片的黄金时段到底能拍多久？","acceptedAnswer":{"@type":"Answer","text":"以11月北纬30度城市为例，日落前约35分钟到日落后20分钟是过渡区间，可用光大约50分钟。真正柔和只有前15分钟，之后反差迅速变大，需要反光板补面部。"}},
+{"@type":"Question","name":"一组跟拍照片从拍到交片要几天？","acceptedAnswer":{"@type":"Answer","text":"活动跟拍当晚做初选，次日一轮精修，第三天交预览。如果涉及五十张以上精修，通常第五天交付，时间主要花在肤色统一和背景杂物清理上。"}},
+{"@type":"Question","name":"照片文件名和素材编号为什么必须规范化？","acceptedAnswer":{"@type":"Answer","text":"编号含日期、场景代码与拍摄序号，例如261101-SP-014，检索时能直接定位场次。混用相机原始编号会导致同名覆盖，归档时返工。"}},
+{"@type":"Question","name":"出片数量少是不是说明拍摄失败？","acceptedAnswer":{"@type":"Answer","text":"按120张毛片筛出35张可用、18张精修，是棚拍的常见比例。数量取决于用途，电商主图只要6张合格图即可起量，多于数量没有意义。"}}
+]}
+</script>
+<style>
+:root{
+--ink:#1c2333;--ink2:#44506b;--muted:#6b7792;
+--paper:#f6f5f1;--card:#ffffff;
+--brand:#1b2a4a;--brand2:#2c3f68;--accent:#c8871a;--accent-soft:#fdf4e0;
+--line:#e2e0d8;--line2:#cfccc1;
+--r:12px;--r-s:8px;
+--sp:clamp(14px,2vw,22px);
+--fs-h1:clamp(1.7rem,3.6vw,2.5rem);
+--fs-h2:clamp(1.24rem,2.2vw,1.5rem);
+--fs-h3:1.06rem;
+--shadow:0 1px 2px rgba(28,35,51,.05),0 6px 18px -12px rgba(28,35,51,.18);
+--font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--font);color:var(--ink);background:var(--paper);line-height:1.8;font-size:15.5px;-webkit-text-size-adjust:100%}
+h1,h2,h3{line-height:1.35;margin:0}
+p{margin:0}
+a{color:var(--brand2)}
+img{max-width:100%;display:block}
+button{font-family:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+.wrap{max-width:1220px;margin:0 auto;padding:0 clamp(12px,3vw,28px)}
+section{scroll-margin-top:132px}
+
+/* 公告条 */
+.notice{background:var(--brand);color:#e9edf6;font-size:13px}
+.notice .wrap{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding-top:7px;padding-bottom:7px;min-height:38px}
+.notice .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none}
+.notice b{color:#fff;font-weight:600}
+.notice a{color:#ffd98a;text-decoration:none;border-bottom:1px dashed rgba(255,217,138,.5)}
+.notice a:hover{border-bottom-style:solid}
+
+/* 页头 */
+.site-head{background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:60}
+.head-in{display:flex;align-items:center;gap:18px;min-height:64px;padding-top:8px;padding-bottom:8px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--brand);flex:none}
+.brand svg{width:36px;height:36px;flex:none}
+.brand-txt{display:flex;flex-direction:column;line-height:1.2}
+.brand-txt strong{font-size:1.06rem;letter-spacing:.5px}
+.brand-txt span{font-size:11px;color:var(--muted);letter-spacing:1.6px}
+.nav{margin-left:auto;display:flex;align-items:center;gap:2px;flex-wrap:wrap}
+.nav a{display:inline-block;padding:6px 10px;border-radius:6px;text-decoration:none;color:var(--ink2);font-size:14px;white-space:nowrap}
+.nav a:hover{background:#eef0f5;color:var(--brand)}
+.head-tools{display:flex;gap:8px;align-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:8px 16px;border-radius:8px;border:1px solid var(--brand);background:var(--brand);color:#fff;font-size:14px;text-decoration:none;cursor:pointer;transition:transform .15s,background .15s}
+.btn:hover{background:var(--brand2);transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--brand)}
+.btn.ghost:hover{background:#eef0f5}
+.menu-btn{display:none;width:40px;height:38px;border:1px solid var(--line2);background:#fff;border-radius:8px;cursor:pointer;padding:0;align-items:center;justify-content:center}
+.menu-btn span{display:block;width:18px;height:2px;background:var(--brand);position:relative}
+.menu-btn span::before,.menu-btn span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--brand)}
+.menu-btn span::before{top:-6px}.menu-btn span::after{top:6px}
+.search{display:flex;align-items:center;border:1px solid var(--line2);background:#fff;border-radius:8px;overflow:hidden}
+.search input{border:0;padding:8px 10px;font-size:14px;width:150px;background:transparent;color:var(--ink)}
+.search input:focus{outline:none;box-shadow:inset 0 0 0 2px var(--accent)}
+.search button{border:0;background:#eef0f5;padding:8px 12px;cursor:pointer;font-size:13px;color:var(--brand);height:100%}
+.search button:hover{background:#e2e6ee}
+#searchMsg{font-size:12px;color:var(--accent);display:none}
+.mobile-panel{display:none;width:100%;border-top:1px solid var(--line);padding:10px 0 4px}
+.mobile-panel a{display:block;padding:9px 8px;text-decoration:none;color:var(--ink2);border-radius:6px}
+.mobile-panel a:hover{background:#eef0f5}
+
+/* 首屏 */
+.hero{position:relative;overflow:hidden;background:linear-gradient(160deg,#1b2a4a 0%,#24365c 55%,#2d4069 100%);color:#eef1f8}
+.hero .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(20px,4vw,52px);padding-top:clamp(34px,5vw,64px);padding-bottom:clamp(34px,5vw,64px);align-items:center}
+.hero-art{position:absolute;inset:0;pointer-events:none;opacity:.9}
+.hero-copy{position:relative;z-index:2}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:2px;color:#ffd98a;border:1px solid rgba(255,217,138,.4);padding:4px 12px;border-radius:99px;margin-bottom:18px}
+.hero h1{font-size:var(--fs-h1);letter-spacing:1px;color:#fff}
+.hero .lede{margin-top:16px;font-size:15.5px;color:#cfd8ec;max-width:40em}
+.hero-acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.hero-acts .btn{border-color:#ffd98a;background:#ffd98a;color:#1b2a4a}
+.hero-acts .btn:hover{background:#ffcf5f}
+.hero-acts .btn.ghost{background:transparent;color:#e8ecf6;border-color:rgba(232,236,246,.45)}
+.hero-acts .btn.ghost:hover{background:rgba(255,255,255,.1)}
+.hero-stats{display:flex;flex-wrap:wrap;gap:26px;margin-top:30px;padding-top:22px;border-top:1px solid rgba(255,255,255,.16)}
+.hero-stats div{line-height:1.25}
+.hero-stats b{display:block;font-size:1.5rem;color:#fff;font-variant-numeric:tabular-nums}
+.hero-stats span{font-size:12.5px;color:#a9b6d3}
+.hero-visual{position:relative;z-index:2}
+.visual-frame{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.22);border-radius:16px;padding:14px;box-shadow:0 20px 40px -24px rgba(0,0,0,.6)}
+.visual-frame svg{display:block;width:100%;height:auto;border-radius:10px;background:#141f36}
+.visual-cap{font-size:12px;color:#a9b6d3;margin-top:10px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+
+/* 布局 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 292px;gap:clamp(20px,3vw,36px);margin-top:clamp(26px,4vw,46px)}
+.main-col{min-width:0}
+.sec{margin-bottom:clamp(30px,4.5vw,52px)}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.sec-head h2{font-size:var(--fs-h2);color:var(--brand);display:flex;align-items:center;gap:10px}
+.sec-head h2::before{content:"";width:5px;height:20px;border-radius:3px;background:var(--accent)}
+.sec-head .more{font-size:13px;color:var(--muted);text-decoration:none}
+.sec-head .more:hover{color:var(--accent)}
+.sec-desc{font-size:13.5px;color:var(--muted);margin-top:6px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow)}
+.pad{padding:clamp(14px,2vw,22px)}
+
+/* 概览 stats */
+.overview-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:12px}
+.ov{background:var(--card);border:1px solid var(--line);border-radius:var(--r-s);padding:14px 16px}
+.ov b{display:block;font-size:1.4rem;color:var(--brand);font-variant-numeric:tabular-nums}
+.ov span{font-size:12.5px;color:var(--muted)}
+.overview-note{margin-top:14px;font-size:14px;color:var(--ink2)}
+
+/* 精选网格 */
+.grid-3{display:grid;grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:16px}
+.pick{overflow:hidden;display:flex;flex-direction:column}
+.pick img{width:100%;height:150px;object-fit:cover;background:#dfe2ea}
+.pick-body{padding:14px 15px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.pick h3{font-size:15.5px;color:var(--ink)}
+.pick p{font-size:13.5px;color:var(--ink2);line-height:1.65}
+.tag{display:inline-block;font-size:11.5px;padding:2px 9px;border-radius:99px;background:var(--accent-soft);color:#8a5a09;border:1px solid #f0dcb4;white-space:nowrap}
+.meta{font-size:12px;color:var(--muted);display:flex;gap:12px;flex-wrap:wrap;margin-top:auto;padding-top:6px;border-top:1px dashed var(--line)}
+
+/* 最新更新 紧凑列表 */
+.updates{list-style:none;margin:0;padding:0}
+.updates li{display:grid;grid-template-columns:88px 1fr auto;gap:12px;align-items:baseline;padding:11px 4px;border-bottom:1px dashed var(--line);font-size:14px}
+.updates li:last-child{border-bottom:0}
+.updates time{font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+.updates a{text-decoration:none;color:var(--ink)}
+.updates a:hover{color:var(--accent)}
+.updates .k{font-size:12px;color:var(--brand2);background:#eef0f5;border-radius:99px;padding:1px 9px;white-space:nowrap}
+
+/* 分类入口 标签索引 */
+.cat-index{display:flex;flex-wrap:wrap;gap:10px}
+.cat-index a{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:99px;background:#fff;border:1px solid var(--line2);text-decoration:none;color:var(--ink2);font-size:13.5px;transition:transform .15s,border-color .15s}
+.cat-index a:hover{transform:translateY(-2px);border-color:var(--accent);color:#8a5a09}
+.cat-index a em{font-style:normal;font-size:11.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+
+/* 深度解析 */
+.deep{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:clamp(18px,3vw,30px);box-shadow:var(--shadow)}
+.deep>p{font-size:15px;color:var(--ink2)}
+.deep h3{font-size:var(--fs-h3);color:var(--brand);margin:26px 0 8px;padding-left:12px;border-left:4px solid var(--accent)}
+.deep h3:first-of-type{margin-top:22px}
+.deep p+p{margin-top:12px}
+.pull{margin:22px 0;padding:16px 18px;background:var(--accent-soft);border-left:4px solid var(--accent);border-radius:0 var(--r-s) var(--r-s) 0;font-size:14.5px;color:#5d4210}
+.check-table{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:12px}
+.check-table th,.check-table td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+.check-table th{background:#f3f2ec;color:var(--brand);font-weight:600;white-space:nowrap}
+.check-table td{color:var(--ink2)}
+.factline{font-size:12.5px;color:var(--muted);margin-top:10px;padding-top:8px;border-top:1px dashed var(--line)}
+
+/* 体验指南 编号步骤 */
+.steps{list-style:none;margin:0;padding:0;counter-reset:st;display:grid;gap:12px}
+.steps li{counter-increment:st;display:grid;grid-template-columns:38px 1fr;gap:14px;background:#fff;border:1px solid var(--line);border-radius:var(--r-s);padding:14px 16px}
+.steps li::before{content:counter(st,decimal-leading-zero);font-size:1.05rem;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;line-height:1.5}
+.steps h3{font-size:14.5px;color:var(--ink);margin-bottom:4px}
+.steps p{font-size:13.5px;color:var(--ink2)}
+
+/* 对照面板 */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:#fff}
+.compare>div{padding:16px 18px}
+.compare>div:first-child{border-right:1px solid var(--line);background:#fbfaf6}
+.compare h3{font-size:14px;color:var(--brand);margin-bottom:8px}
+.compare ul{margin:0;padding-left:18px;font-size:13.5px;color:var(--ink2)}
+.compare li{margin-bottom:5px}
+
+/* 时间线 */
+.timeline{list-style:none;margin:0;padding:0 0 0 18px;border-left:2px solid var(--line2);display:grid;gap:16px}
+.timeline li{position:relative}
+.timeline li::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:#fff;border:2px solid var(--accent)}
+.timeline time{font-size:12.5px;color:var(--accent);font-variant-numeric:tabular-nums}
+.timeline p{font-size:13.5px;color:var(--ink2)}
+.timeline strong{color:var(--ink)}
+
+/* FAQ */
+.faq details{background:#fff;border:1px solid var(--line);border-radius:var(--r-s);margin-bottom:10px;padding:0 16px;transition:border-color .15s}
+.faq details[open]{border-color:var(--accent)}
+.faq summary{cursor:pointer;padding:13px 0;font-size:14.5px;font-weight:600;color:var(--ink);list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:1.1rem;color:var(--accent);font-weight:400;line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq p{padding:0 0 14px;font-size:13.5px;color:var(--ink2)}
+
+/* 评论 */
+.comments{display:grid;gap:12px}
+.cm{background:#fff;border:1px solid var(--line);border-radius:var(--r-s);padding:14px 16px}
+.cm-head{display:flex;align-items:center;gap:10px;margin-bottom:6px;flex-wrap:wrap}
+.avatar{width:30px;height:30px;border-radius:50%;background:#e7e9f0;color:var(--brand);display:grid;place-items:center;font-size:13px;font-weight:700;flex:none}
+.cm-head b{font-size:13.5px;color:var(--ink)}
+.cm-head time{font-size:12px;color:var(--muted);margin-left:auto}
+.cm p{font-size:13.5px;color:var(--ink2)}
+.cm .ref{font-size:12px;color:var(--brand2);background:#eef0f5;border-radius:4px;padding:1px 7px;display:inline-block;margin-top:6px}
+
+/* 资讯 */
+.news{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.news article{background:#fff;border:1px solid var(--line);border-radius:var(--r-s);padding:14px 16px}
+.news time{font-size:12px;color:var(--muted)}
+.news h3{font-size:14.5px;margin:6px 0 5px;color:var(--ink)}
+.news p{font-size:13.5px;color:var(--ink2)}
+
+/* 相关推荐 */
+.recs{display:flex;flex-wrap:wrap;gap:10px}
+.recs a{font-size:13.5px;text-decoration:none;color:var(--brand2);background:#fff;border:1px solid var(--line2);border-radius:99px;padding:6px 14px}
+.recs a:hover{background:var(--accent-soft);border-color:#e9c98e;color:#8a5a09}
+
+/* 榜单 */
+.rank{list-style:none;margin:0;padding:0;counter-reset:rk;display:grid;gap:8px}
+.rank li{counter-increment:rk;display:grid;grid-template-columns:30px 1fr auto;gap:12px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:var(--r-s);padding:10px 14px;font-size:14px}
+.rank li::before{content:counter(rk);font-weight:700;color:#fff;background:var(--brand);width:24px;height:24px;border-radius:6px;display:grid;place-items:center;font-size:12.5px;font-variant-numeric:tabular-nums}
+.rank li:nth-child(1)::before{background:var(--accent)}
+.rank .num{font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* 侧栏 */
+.side{display:flex;flex-direction:column;gap:18px;min-width:0}
+.side .card{padding:16px 18px}
+.side h2{font-size:14.5px;color:var(--brand);margin-bottom:10px;letter-spacing:.5px}
+.side-nav{position:sticky;top:116px}
+.side-nav a{display:block;font-size:13.5px;color:var(--ink2);text-decoration:none;padding:7px 10px;border-radius:6px;border-left:3px solid transparent}
+.side-nav a:hover{background:#f2f3f7}
+.side-nav a.active{background:var(--accent-soft);border-left-color:var(--accent);color:#8a5a09;font-weight:600}
+.side-list{list-style:none;margin:0;padding:0;font-size:13.5px}
+.side-list li{padding:8px 0;border-bottom:1px dashed var(--line);color:var(--ink2)}
+.side-list li:last-child{border-bottom:0}
+.side-list b{color:var(--brand);font-variant-numeric:tabular-nums}
+.side-quote{font-size:13px;color:var(--ink2);background:#fbfaf6;border:1px dashed var(--line2);border-radius:var(--r-s);padding:12px 14px}
+.side-quote b{color:var(--brand)}
+
+/* 页尾 */
+.site-foot{background:#16233d;color:#c3cdde;margin-top:clamp(34px,5vw,60px);font-size:13.5px}
+.foot-top{display:grid;grid-template-columns:1.3fr repeat(3,1fr);gap:clamp(18px,3vw,34px);padding-top:clamp(28px,4vw,48px);padding-bottom:clamp(22px,3vw,34px)}
+.foot-brand{display:flex;align-items:center;gap:10px;color:#fff;font-size:1.05rem;font-weight:600;margin-bottom:12px}
+.foot-brand svg{width:30px;height:30px}
+.foot-top p{color:#93a2bd;line-height:1.75;max-width:32em}
+.foot-col h2{font-size:13px;color:#fff;margin-bottom:10px;letter-spacing:1px}
+.foot-col a{display:block;color:#a9b6d3;text-decoration:none;padding:4px 0;font-size:13px}
+.foot-col a:hover{color:#ffd98a}
+.foot-note{border-top:1px solid rgba(255,255,255,.12);padding:16px 0;font-size:12.5px;color:#7d8caa;line-height:1.85}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding:14px 0 26px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;color:#7d8caa}
+
+/* 回到顶部 */
+#toTop{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border-radius:50%;border:1px solid var(--line2);background:#fff;color:var(--brand);cursor:pointer;display:none;place-items:center;box-shadow:var(--shadow);z-index:70}
+#toTop:hover{background:var(--accent-soft)}
+#toTop.show{display:grid}
+
+/* 响应式 */
+@media (max-width:1000px){
+.layout{grid-template-columns:1fr}
+.side{order:2}
+.side-nav{position:static}
+.hero .wrap{grid-template-columns:1fr}
+.hero-visual{max-width:520px}
+.foot-top{grid-template-columns:1fr 1fr}
+}
+@media (max-width:780px){
+.nav{display:none}
+.menu-btn{display:inline-flex}
+.head-tools{margin-left:auto}
+.search input{width:112px}
+.mobile-panel.open{display:block}
+.hero-stats{gap:20px}
+.compare{grid-template-columns:1fr}
+.compare>div:first-child{border-right:0;border-bottom:1px solid var(--line)}
+.foot-top{grid-template-columns:1fr}
+.updates li{grid-template-columns:74px 1fr;row-gap:2px}
+.updates .k{grid-column:2;justify-self:start}
+}
+@media (max-width:520px){
+.hero-acts .btn{flex:1 1 auto}
+.search{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+*{transition:none!important;animation:none!important}
+.btn:hover,.cat-index a:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="notice" role="region" aria-label="站内更新公告">
+  <div class="wrap">
+    <span class="dot" aria-hidden="true"></span>
+    <span><b>91传媒照片</b> 档案库更新：11月6日新增「苏州河外景 · 阴天补光」32张成片，附现场参数表；11月4日棚拍三灯组布光图已更正辅灯位置。</span>
+    <a href="/#latest">查看更新清单 →</a>
+  </div>
+</div>
+
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="brand" href="/#top" aria-label="91传媒照片 首页">
+      <svg viewBox="0 0 64 64" role="img" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#1b2a4a"/>
+        <rect x="11" y="20" width="42" height="29" rx="6" fill="none" stroke="#f2b032" stroke-width="3"/>
+        <circle cx="32" cy="34.5" r="8.5" fill="none" stroke="#f2b032" stroke-width="3"/>
+        <circle cx="32" cy="34.5" r="3" fill="#f2b032"/>
+        <rect x="22" y="13" width="13" height="7" rx="2.5" fill="#f2b032"/>
+        <circle cx="46" cy="27" r="2.2" fill="#f2b032"/>
+      </svg>
+      <span class="brand-txt"><strong>91传媒照片</strong><span>PHOTO ARCHIVE</span></span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="/#overview">领域概览</a>
+      <a href="/#picks">精选推荐</a>
+      <a href="/#latest">最新更新</a>
+      <a href="/#cats">分类入口</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#guide">体验指南</a>
+      <a href="/#faq">常见问答</a>
+      <a href="/#comments">用户评论</a>
+    </nav>
+    <div class="head-tools">
+      <form class="search" role="search" id="searchForm" aria-label="站内本地查找">
+        <input type="search" id="searchInput" placeholder="查场次、机型" aria-label="输入关键词查找">
+        <button type="submit">查找</button>
+      </form>
+      <span id="searchMsg" role="status" aria-live="polite"></span>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobilePanel" aria-label="展开导航菜单"><span></span></button>
+    </div>
+    <div class="mobile-panel" id="mobilePanel">
+      <a href="/#overview">领域概览</a>
+      <a href="/#picks">精选内容推荐</a>
+      <a href="/#latest">最新更新</a>
+      <a href="/#cats">分类入口</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#guide">体验指南</a>
+      <a href="/#compare">棚拍与外景对照</a>
+      <a href="/#faq">常见问答</a>
+      <a href="/#comments">用户评论</a>
+      <a href="/#news">相关资讯</a>
+      <a href="/#recs">相关推荐</a>
+      <a href="/#rank">本月榜单</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%">
+        <defs>
+          <radialGradient id="g1" cx="70%" cy="30%" r="60%">
+            <stop offset="0%" stop-color="#3d558a" stop-opacity=".55"/>
+            <stop offset="100%" stop-color="#1b2a4a" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <rect width="600" height="400" fill="url(#g1)"/>
+        <g stroke="#8fa4cc" stroke-opacity=".28" stroke-width="1" fill="none">
+          <rect x="60" y="40" width="120" height="90" rx="6"/>
+          <rect x="420" y="60" width="120" height="90" rx="6"/>
+          <rect x="80" y="270" width="140" height="86" rx="6"/>
+          <rect x="390" y="250" width="150" height="96" rx="6"/>
+        </g>
+        <g fill="#f2b032" fill-opacity=".5">
+          <circle cx="120" cy="85" r="12"/><circle cx="480" cy="105" r="12"/>
+          <circle cx="150" cy="313" r="12"/><circle cx="465" cy="298" r="12"/>
+        </g>
+      </svg>
+    </div>
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="eyebrow">PHOTO · 棚拍 / 外景 / 跟拍</span>
+        <h1 id="heroTitle">91传媒照片</h1>
+        <p class="lede">这里存档的是拍摄现场的落地记录：哪一天、用什么机身、在哪块场地、出片多少张、后期改了几轮。棚拍灯光位置、外景时段选择、跟拍交付节奏，都能翻到对应的参数表和勘误记录。</p>
+        <div class="hero-acts">
+          <a class="btn" href="/#deep">读深度解析</a>
+          <a class="btn ghost" href="/#latest">看本周更新</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>486</b><span>在档拍摄场次</span></div>
+          <div><b>27</b><span>覆盖场地</span></div>
+          <div><b>12</b><span>器材机型档</span></div>
+          <div><b>35 / 120</b><span>棚拍可用出片比</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="visual-frame">
+          <svg viewBox="0 0 320 220" role="img" aria-labelledby="visTitle">
+            <title id="visTitle">棚拍三灯位示意：主灯左前45度，辅灯右侧，轮廓灯后方30度</title>
+            <rect width="320" height="220" fill="#141f36"/>
+            <circle cx="160" cy="118" r="46" fill="none" stroke="#4e6288" stroke-width="1.5" stroke-dasharray="4 5"/>
+            <circle cx="160" cy="118" r="8" fill="#f2b032"/>
+            <path d="M160 118 L160 60" stroke="#5c729c" stroke-width="1.5"/>
+            <path d="M160 118 L104 74" stroke="#5c729c" stroke-width="1.5"/>
+            <path d="M160 118 L232 158" stroke="#5c729c" stroke-width="1.5"/>
+            <rect x="88" y="66" width="18" height="18" rx="3" fill="none" stroke="#f2b032" stroke-width="2"/>
+            <rect x="218" y="146" width="18" height="18" rx="3" fill="none" stroke="#f2b032" stroke-width="2"/>
+            <rect x="148" y="42" width="24" height="16" rx="3" fill="none" stroke="#8fa4cc" stroke-width="2"/>
+            <text x="74" y="98" fill="#8fa4cc" font-size="10" font-family="sans-serif">主灯 70%</text>
+            <text x="206" y="140" fill="#8fa4cc" font-size="10" font-family="sans-serif">辅灯 35%</text>
+            <text x="148" y="34" fill="#8fa4cc" font-size="10" font-family="sans-serif">轮廓 5600K</text>
+            <text x="24" y="204" fill="#5d7096" font-size="10" font-family="sans-serif">图：11月4日 A 棚实测布光俯视</text>
+          </svg>
+          <div class="visual-cap"><span>A 棚 · 三灯组</span><span>5600K / f2.8 / 1/125s</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap layout">
+    <div class="main-col">
+
+      <section class="sec" id="overview" aria-labelledby="h-overview">
+        <div class="sec-head">
+          <h2 id="h-overview">领域概览：一组照片的构成要素</h2>
+          <a class="more" href="/#latest">按场次浏览 →</a>
+        </div>
+        <p class="sec-desc">先拆开看。影像档案里常说的「一组」，实际由场次编号、器材档、场地、人数、成片结构五块拼起来，任何一块缺记录，回查就会卡住。</p>
+        <div class="overview-grid" style="margin-top:14px">
+          <div class="ov"><b>场次编号</b><span>如 261101-SP-014，日期+场景代码+序号</span></div>
+          <div class="ov"><b>器材档</b><span>机身三档：全画幅/APS-C/中画幅</span></div>
+          <div class="ov"><b>场地类型</b><span>棚拍、外景、活动跟拍、静物台</span></div>
+          <div class="ov"><b>人数规模</b><span>单人、双人、群像 8 人以上</span></div>
+          <div class="ov"><b>成片结构</b><span>毛片—初选—精修—交付四层</span></div>
+          <div class="ov"><b>后期轮次</b><span>常见 1—3 轮，肤色统一最耗时</span></div>
+        </div>
+        <p class="overview-note">以 10 月 29 日到 11 月 7 日的 19 个场次统计，棚拍平均毛片 132 张、初选 41 张、精修 16 张；外景平均毛片 168 张、初选 46 张、精修 19 张。外景精修多出的 3 张，主要花在天空压暗和地面杂物清理上。</p>
+      </section>
+
+      <section class="sec" id="picks" aria-labelledby="h-picks">
+        <div class="sec-head">
+          <h2 id="h-picks">精选内容推荐</h2>
+          <a class="more" href="/#rank">完整榜单 →</a>
+        </div>
+        <div class="grid-3">
+          <article class="pick card">
+            <img src="https://picsum.photos/seed/91studio-light/460/300" width="460" height="300" loading="lazy" alt="棚内三灯组布光俯视图，主灯与辅灯位置标注清晰">
+            <div class="pick-body">
+              <span class="tag">棚拍布光</span>
+              <h3>A 棚三灯组布光复核</h3>
+              <p>11月4日把辅灯从右前移到右侧平位，光比从1:3收到1:2.5，面部高光溢出减少约两成。</p>
+              <div class="meta"><span>场次 261104-SP-021</span><span>18 张精修</span></div>
+            </div>
+          </article>
+          <article class="pick card">
+            <img src="https://picsum.photos/seed/riverbank-dusk/460/300" width="460" height="300" loading="lazy" alt="苏州河岸边日落过渡时段的逆光人像外景">
+            <div class="pick-body">
+              <span class="tag">外景时段</span>
+              <h3>苏州河阴天补光实录</h3>
+              <p>11月6日阴天，色温 6200K 发灰，靠一块 1.2 米反光板把面部提了半档，成片不显闷。</p>
+              <div class="meta"><span>场次 261106-EX-007</span><span>32 张成片</span></div>
+            </div>
+          </article>
+          <article class="pick card">
+            <img src="https://picsum.photos/seed/event-backstage/460/300" width="460" height="300" loading="lazy" alt="活动现场后台跟拍，工作人员整理设备与灯架">
+            <div class="pick-body">
+              <span class="tag">活动跟拍</span>
+              <h3>发布会后台 90 分钟跟拍</h3>
+              <p>10月31日场次，机位固定在通道口，快门优先 1/250s，抓到 6 张交接流程的关键动作。</p>
+              <div class="meta"><span>场次 261031-EV-002</span><span>交付 3 天</span></div>
+            </div>
+          </article>
+          <article class="pick card">
+            <img src="https://picsum.photos/seed/stilllife-table/460/300" width="460" height="300" loading="lazy" alt="静物台俯拍，柔光布与产品摆放位置">
+            <div class="pick-body">
+              <span class="tag">静物台</span>
+              <h3>小件商品俯拍 6 图起量</h3>
+              <p>顶光加双侧柔光布，白平衡手动 5500K，6 张主图当天出片，阴影边界清楚不糊。</p>
+              <div class="meta"><span>场次 261103-ST-009</span><span>6 张主图</span></div>
+            </div>
+          </article>
+          <article class="pick card">
+            <img src="https://picsum.photos/seed/portrait-double/460/300" width="460" height="300" loading="lazy" alt="双人肖像棚拍，两人侧身站位与轮廓灯关系">
+            <div class="pick-body">
+              <span class="tag">双人肖像</span>
+              <h3>双人侧面构图取舍</h3>
+              <p>两人身高差 14 厘米，用 55 毫米焦段平视，站位前后错开 30 厘米，脸不重叠。</p>
+              <div class="meta"><span>场次 261102-SP-013</span><span>21 张初选</span></div>
+            </div>
+          </article>
+          <article class="pick card">
+            <img src="https://picsum.photos/seed/archive-shelves/460/300" width="460" height="300" loading="lazy" alt="归档硬盘与素材标签，文件夹按场次编号排列">
+            <div class="pick-body">
+              <span class="tag">归档规范</span>
+              <h3>素材编号与备份双盘</h3>
+              <p>日期+场景代码+序号三段式，当晚拷入两块硬盘，一周内不覆盖卡内原始文件。</p>
+              <div class="meta"><span>可核对流程</span><span>5 个步骤</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="sec" id="latest" aria-labelledby="h-latest">
+        <div class="sec-head">
+          <h2 id="h-latest">最新更新</h2>
+          <span class="more">截至 2026-11-08</span>
+        </div>
+        <ul class="updates card pad">
+          <li><time datetime="2026-11-07">11月7日</time><a href="/#deep">棚拍光比数据表补入 10 月 29 日场次</a><span class="k">数据表</span></li>
+          <li><time datetime="2026-11-06">11月6日</time><a href="/#picks">苏州河外景 32 张成片与反光板位置图上线</a><span class="k">成片</span></li>
+          <li><time datetime="2026-11-05">11月5日</time><a href="/#guide">外景拍摄时段选择清单更新至冬季版</a><span class="k">指南</span></li>
+          <li><time datetime="2026-11-04">11月4日</time><a href="/#deep">A 棚辅灯位置勘误：右前改右侧平位</a><span class="k">勘误</span></li>
+          <li><time datetime="2026-11-03">11月3日</time><a href="/#picks">静物台 6 图主图流程与白平衡设置记录</a><span class="k">记录</span></li>
+          <li><time datetime="2026-11-02">11月2日</time><a href="/#comments">10 月场次用户反馈汇总，新增 12 条具体意见</a><span class="k">评论</span></li>
+          <li><time datetime="2026-10-31">10月31日</time><a href="/#news">发布会后台跟拍交付时间从 5 天压到 3 天</a><span class="k">资讯</span></li>
+          <li><time datetime="2026-10-30">10月30日</time><a href="/#rank">10 月场次出片效率榜单发布</a><span class="k">榜单</span></li>
+        </ul>
+      </section>
+
+      <section class="sec" id="cats" aria-labelledby="h-cats">
+        <div class="sec-head">
+          <h2 id="h-cats">分类入口</h2>
+          <span class="more">按拍摄形态进入</span>
+        </div>
+        <div class="cat-index">
+          <a href="/#picks">棚拍布光 <em>126</em></a>
+          <a href="/#picks">外景时段 <em>98</em></a>
+          <a href="/#picks">活动跟拍 <em>74</em></a>
+          <a href="/#picks">静物台拍摄 <em>52</em></a>
+          <a href="/#picks">双人肖像 <em>44</em></a>
+          <a href="/#picks">群像站位 <em>31</em></a>
+          <a href="/#deep">光比与色温 <em>67</em></a>
+          <a href="/#guide">后期肤色统一 <em>58</em></a>
+          <a href="/#guide">素材归档规范 <em>39</em></a>
+          <a href="/#latest">勘误与修订 <em>22</em></a>
+          <a href="/#compare">器材机型档 <em>12</em></a>
+          <a href="/#news">交付节奏 <em>18</em></a>
+        </div>
+      </section>
+
+      <section class="sec" id="deep" aria-labelledby="h-deep">
+        <div class="sec-head">
+          <h2 id="h-deep">深度解析</h2>
+          <span class="more">全页唯一主体阅读区</span>
+        </div>
+        <article class="deep">
+          <p>棚拍好不好，八成在开机前二十分钟定完。灯光位置、光比、色温三件事没谈拢，后面两百张毛片都只能拿来对照返工。这个判断可以拿去反驳，但反驳得靠同一场地的数据。</p>
+
+          <h3>一、辅灯往右挪 40 厘米，光比从 1:3 变成 1:2.5</h3>
+          <p>11 月 4 日 A 棚场次 261104-SP-021，主灯 500 焦耳、柔光箱 90×90 厘米，放在模特左前 45 度；辅灯原先在右前 30 度，功率 190 焦耳。出片检查时发现左颊高光过曝，直方图右端削平约 4%。把辅灯移到右侧平位、功率提到 210 焦耳，光比降到 1:2.5，同一角度重拍 36 张，过曝削峰消失。</p>
+          <p>操作人当时记的原始笔记是「辅灯右前方过近，脸部偏硬」，改成「右侧平位、距模特 1.8 米」以后才复现成功。这条记录的价值在距离和功率两个数字，缺一个都复现不了。</p>
+
+          <h3>二、外景可用光只有约 15 分钟，不是 50 分钟</h3>
+          <p>11 月 6 日苏州河场次 261106-EX-007，日落时间 17 时 02 分。16 时 40 分开始测光，面部与天空亮度差 2.7 档；17 时 05 分反差缩到 1.4 档，17 时 20 分又拉回 2.2 档。真正能不用补光直出的，只有 17 时 00 分到 17 时 15 分这一段。</p>
+          <p>常被转述的「黄金一小时」在 11 月的北纬 30 度城市站不住。那段时间里，前 25 分钟需要反光板提面部，后 20 分钟需要压天空，中间那 15 分钟才是真窗口。把窗口说成大时段，会导致排期把模特到场时间浪费在硬光里。</p>
+
+          <h3>三、交付慢，慢在选片而不是修图</h3>
+          <p>10 月 31 日发布会后台跟拍，毛片 340 张。当晚初选 68 张用了 2 小时 10 分，次日精修 24 张用了 3 小时 40 分，第三天交预览。从时长看，精修确实更久，但真正拖后交付的是初选之后等甲方确认的那 18 小时。</p>
+          <p>所以「修图慢」这个说法需要拆开。判定的可核对项有三条：初选耗时、确认等待时长、精修张数。三者的记录方式如下表，任一项缺失，交付节奏就没法归因。</p>
+
+          <table class="check-table">
+            <caption style="caption-side:top;text-align:left;font-size:12.5px;color:#6b7792;padding-bottom:6px">表：10 月 31 日场次交付耗时拆解（可核对）</caption>
+            <thead><tr><th>环节</th><th>耗时</th><th>数量</th><th>记录来源</th></tr></thead>
+            <tbody>
+              <tr><td>初选</td><td>2 小时 10 分</td><td>340 → 68 张</td><td>当晚工作日志</td></tr>
+              <tr><td>甲方确认</td><td>18 小时</td><td>68 张</td><td>沟通记录时间戳</td></tr>
+              <tr><td>精修</td><td>3 小时 40 分</td><td>24 张</td><td>修图文件修改时间</td></tr>
+              <tr><td>交预览</td><td>第 3 天</td><td>24 张</td><td>交付邮件日期</td></tr>
+            </tbody>
+          </table>
+          <p class="factline">数据口径：10 月 31 日至 11 月 2 日场地工作日志；确认时长为首次发送到首次回复的间隔，不含二次修改。</p>
+
+          <div class="pull">把判断拆成可核对结构，比给结论有用。上面三节都能被同一场地的下一组数据推翻，推翻时请带上时间、功率、距离三项。</div>
+
+          <h3>四、机型档的差别，在成片比例上体现得更清楚</h3>
+          <p>10 月 29 日到 11 月 7 日的 19 场里，全画幅机身参与 13 场，平均初选率 31%；APS-C 参与 5 场，平均初选率 27%；中画幅只有 1 场，毛片 64 张、初选 29 张，初选率 45%，但单张文件 118MB，修图时间翻倍。</p>
+          <p>结论不能简单写成「中画幅更好」。它在初选率上占优，交付成本却更高；电商主图只要 6 张合格图，用中画幅并不划算。这段判断只适用于需要大幅面印刷或精细裁切的场景。</p>
+        </article>
+      </section>
+
+      <section class="sec" id="guide" aria-labelledby="h-guide">
+        <div class="sec-head">
+          <h2 id="h-guide">体验指南：从进棚到交片</h2>
+          <span class="more">5 个步骤</span>
+        </div>
+        <ol class="steps">
+          <li><div><h3>开机前确认三件事</h3><p>问清用途、交付张数、交付日。用途决定裁切比例，交付张数决定精修上限，交付日决定选片能不能过夜。</p></div></li>
+          <li><div><h3>场地和器材先落位</h3><p>主灯左前 45 度、辅灯右侧平位、轮廓灯后方 30 度。机身色温手动 5600K，别用自动，棚内混光最容易翻车。</p></div></li>
+          <li><div><h3>拍 10 张试片看直方图</h3><p>高光右端削平超过 3% 就降半档功率。试片不用精修，只看曝光和肤色是否统一。</p></div></li>
+          <li><div><h3>按场次编号归档</h3><p>日期+场景代码+序号，例如 261106-EX-007。当晚拷双盘，卡内文件保留一周再格式化。</p></div></li>
+          <li><div><h3>初选后当天发预览</h3><p>68 张初选发预览，注明精修张数和可修改轮次。确认等待越短，交付日越稳。</p></div></li>
+        </ol>
+      </section>
+
+      <section class="sec" id="compare" aria-labelledby="h-compare">
+        <div class="sec-head">
+          <h2 id="h-compare">棚拍与外景对照</h2>
+          <span class="more">同维度比较</span>
+        </div>
+        <div class="compare">
+          <div>
+            <h3>棚拍 · A 棚</h3>
+            <ul>
+              <li>光线完全可控，色温固定 5600K</li>
+              <li>毛片 132 张 / 精修 16 张（近期均值）</li>
+              <li>单场 4 小时可完成拍摄与初选</li>
+              <li>返工成本低，灯光挪动即可重拍</li>
+              <li>弱项：背景单调，需道具补层次</li>
+            </ul>
+          </div>
+          <div>
+            <h3>外景 · 苏州河</h3>
+            <ul>
+              <li>光线随时段变化，17 时前后反差翻倍</li>
+              <li>毛片 168 张 / 精修 19 张（近期均值）</li>
+              <li>单场需预留 5 小时含转场</li>
+              <li>返工成本高，天气窗口错过要改期</li>
+              <li>弱项：地面杂物清理拉长后期</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec" id="timeline" aria-labelledby="h-timeline">
+        <div class="sec-head">
+          <h2 id="h-timeline">近期场次时间线</h2>
+          <span class="more">10月29日—11月7日</span>
+        </div>
+        <ul class="timeline">
+          <li><time datetime="2026-11-07">11月7日</time><p><strong>光比数据表</strong>补入 10 月 29 日场次，确认主灯 500 焦耳时面部与背景差 1.6 档。</p></li>
+          <li><time datetime="2026-11-06">11月6日</time><p><strong>苏州河外景</strong>阴天补光完成，32 张成片，反光板距面部 1.4 米。</p></li>
+          <li><time datetime="2026-11-04">11月4日</time><p><strong>A 棚辅灯勘误</strong>，右前 30 度改右侧平位，重拍 36 张。</p></li>
+          <li><time datetime="2026-11-03">11月3日</time><p><strong>静物台</strong>顶光加双侧柔光布，6 张主图当天出片。</p></li>
+          <li><time datetime="2026-11-02">11月2日</time><p><strong>双人肖像</strong>身高差 14 厘米，55 毫米焦段平视完成 21 张初选。</p></li>
+          <li><time datetime="2026-10-31">10月31日</time><p><strong>发布会后台</strong>90 分钟跟拍，交付从 5 天压到 3 天。</p></li>
+          <li><time datetime="2026-10-29">10月29日</time><p><strong>群像站位</strong>8 人两排，第二排垫高 18 厘米，后排脸部无遮挡。</p></li>
+        </ul>
+      </section>
+
+      <section class="sec" id="faq" aria-labelledby="h-faq">
+        <div class="sec-head">
+          <h2 id="h-faq">常见问答</h2>
+          <span class="more">按操作频次排序</span>
+        </div>
+        <div class="faq">
+          <details open>
+            <summary>棚拍三灯组具体怎么摆？</summary>
+            <p>主灯在模特左前 45 度，功率约占总光比七成；辅灯在右侧平位，补一档半；轮廓灯从后方 30 度打头发边缘。三只灯都套柔光箱时，色温统一设 5600K，后期才不会拉不回来。</p>
+          </details>
+          <details>
+            <summary>外景照片的黄金时段到底能拍多久？</summary>
+            <p>以 11 月北纬 30 度城市为例，日落前约 35 分钟到日落后 20 分钟是过渡区间，可用光约 50 分钟。真正柔和的只有中间 15 分钟，之后反差迅速变大，需要反光板补面部。</p>
+          </details>
+          <details>
+            <summary>一组跟拍照片从拍到交片要几天？</summary>
+            <p>活动跟拍当晚做初选，次日一轮精修，第三天交预览。涉及 50 张以上精修时通常第五天交付，时间主要花在肤色统一和背景杂物清理。</p>
+          </details>
+          <details>
+            <summary>照片文件名和素材编号为什么必须规范化？</summary>
+            <p>编号含日期、场景代码与拍摄序号，例如 261101-SP-014，检索时能直接定位场次。混用相机原始编号会出同名覆盖，归档时返工。</p>
+          </details>
+          <details>
+            <summary>出片数量少是不是说明拍摄失败？</summary>
+            <p>按 120 张毛片筛出 35 张可用、18 张精修，是棚拍常见比例。数量取决于用途，电商主图只要 6 张合格图即可起量，多拍没有意义。</p>
+          </details>
+          <details>
+            <summary>阴天外景是不是只能靠修图救？</summary>
+            <p>阴天色温偏高，画面发灰。一块 1.2 米反光板把面部提半档、机内色温降到 5400K，11 月 6 日苏州河场次成片就没有闷感，修图量反而下降。</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="sec" id="comments" aria-labelledby="h-comments">
+        <div class="sec-head">
+          <h2 id="h-comments">用户评论</h2>
+          <span class="more">共 12 条 · 展示 6 条</span>
+        </div>
+        <div class="comments">
+          <div class="cm">
+            <div class="cm-head"><span class="avatar" aria-hidden="true">林</span><b>林工</b><time datetime="2026-11-07">11月7日</time></div>
+            <p>辅灯改右侧平位这条勘误挺实在。上周照着右前 30 度拍，左颊那片高光确实削了，改成平位后好了。</p>
+            <span class="ref">指向：261104-SP-021 勘误</span>
+          </div>
+          <div class="cm">
+            <div class="cm-head"><span class="avatar" aria-hidden="true">周</span><b>周小满</b><time datetime="2026-11-06">11月6日</time></div>
+            <p>15 分钟那个说法有点绝对。我们场地北侧有楼，日落前二十分钟光就压下来了，实际窗口比表上短。</p>
+            <span class="ref">指向：外景时段解析</span>
+          </div>
+          <div class="cm">
+            <div class="cm-head"><span class="avatar" aria-hidden="true">陈</span><b>陈默</b><time datetime="2026-11-05">11月5日</time></div>
+            <p>交付拆解那张表清楚，确认等 18 小时才是大头的说法，跟自己上个月那场对得上。</p>
+            <span class="ref">指向：10月31日跟拍</span>
+          </div>
+          <div class="cm">
+            <div class="cm-head"><span class="avatar" aria-hidden="true">许</span><b>许摄影</b><time datetime="2026-11-04">11月4日</time></div>
+            <p>中画幅初选率 45% 是单场数据，样本只有 1 场，拿来说“更好”不成立吧。等后面几场再说。</p>
+            <span class="ref">指向：机型档对比</span>
+          </div>
+          <div class="cm">
+            <div class="cm-head"><span class="avatar" aria-hidden="true">吴</span><b>吴舟</b><time datetime="2026-11-03">11月3日</time></div>
+            <p>静物台那个 6 张主图流程抄了一遍，白平衡手设 5500K 之后阴影确实干净。但道具清单没给全，摆位还是靠自己试。</p>
+            <span class="ref">指向：261103-ST-009</span>
+          </div>
+          <div class="cm">
+            <div class="cm-head"><span class="avatar" aria-hidden="true">赵</span><b>赵一鸣</b><time datetime="2026-11-02">11月2日</time></div>
+            <p>双人肖像身高差 14 厘米错位 30 厘米这个数挺有用，下次直接照搬。不过 55 毫米在室内略紧，换 35 毫米也许能多留背景。</p>
+            <span class="ref">指向：261102-SP-013</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec" id="news" aria-labelledby="h-news">
+        <div class="sec-head">
+          <h2 id="h-news">相关资讯</h2>
+          <span class="more">按发布时间</span>
+        </div>
+        <div class="news">
+          <article>
+            <time datetime="2026-11-06">11月6日</time>
+            <h3>苏州河岸景补光成片上线</h3>
+            <p>32 张成片附反光板距面部 1.4 米的位置图，色温降到 5400K，面部与天空差 1.4 档。</p>
+          </article>
+          <article>
+            <time datetime="2026-11-04">11月4日</time>
+            <h3>A 棚布光图勘误</h3>
+            <p>辅灯从右前 30 度改为右侧平位，功率 190 提到 210 焦耳，重拍 36 张复核通过。</p>
+          </article>
+          <article>
+            <time datetime="2026-11-03">11月3日</time>
+            <h3>静物台主图流程固定</h3>
+            <p>顶光加双侧柔光布，白平衡手动 5500K，6 张主图当天出片，单张修图时间约 7 分钟。</p>
+          </article>
+          <article>
+            <time datetime="2026-10-31">10月31日</time>
+            <h3>跟拍交付压缩到 3 天</h3>
+            <p>初选不过夜、预览当天发、精修分两批，发布会后台场次 340 张毛片按期交 24 张。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="sec" id="recs" aria-labelledby="h-recs">
+        <div class="sec-head">
+          <h2 id="h-recs">相关推荐</h2>
+          <span class="more">继续翻</span>
+        </div>
+        <div class="recs">
+          <a href="/#deep">棚拍辅灯光比怎么调</a>
+          <a href="/#deep">外景黄金时段判断方法</a>
+          <a href="/#guide">素材编号三段式写法</a>
+          <a href="/#compare">全画幅与 APS-C 出片对比</a>
+          <a href="/#picks">双人肖像站位经验</a>
+          <a href="/#guide">阴天补光反光板选型</a>
+          <a href="/#faq">跟拍交片周期怎么估</a>
+          <a href="/#picks">静物台 6 图起量流程</a>
+        </div>
+      </section>
+
+      <section class="sec" id="rank" aria-labelledby="h-rank">
+        <div class="sec-head">
+          <h2 id="h-rank">10 月出片效率榜单</h2>
+          <span class="more">按初选率排序</span>
+        </div>
+        <ol class="rank">
+          <li><span>261103-ST-009 静物台 · 6 图起量</span><span class="num">初选率 42%</span></li>
+          <li><span>261102-SP-013 双人肖像 · 55 毫米</span><span class="num">初选率 36%</span></li>
+          <li><span>261106-EX-007 苏州河外景</span><span class="num">初选率 34%</span></li>
+          <li><span>261031-EV-002 发布会后台</span><span class="num">初选率 28%</span></li>
+          <li><span>261101-SP-014 单人棚拍</span><span class="num">初选率 26%</span></li>
+        </ol>
+        <p class="sec-desc">统计口径：初选张数 ÷ 毛片张数，不含二次确认后新增的补拍。静物台样本为 52 张毛片，基数是五条里最小的。</p>
+      </section>
+
+    </div>
+
+    <aside class="side" aria-label="侧栏导航与数据">
+      <nav class="card side-nav" aria-label="页内导航">
+        <h2>页内导航</h2>
+        <a href="/#overview">领域概览</a>
+        <a href="/#picks">精选内容推荐</a>
+        <a href="/#latest">最新更新</a>
+        <a href="/#cats">分类入口</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#compare">棚拍与外景对照</a>
+        <a href="/#timeline">场次时间线</a>
+        <a href="/#faq">常见问答</a>
+        <a href="/#comments">用户评论</a>
+        <a href="/#news">相关资讯</a>
+        <a href="/#rank">出片效率榜单</a>
+      </nav>
+      <div class="card">
+        <h2>本周场次规模</h2>
+        <ul class="side-list">
+          <li>棚拍场次 <b>8</b> 场</li>
+          <li>外景场次 <b>5</b> 场</li>
+          <li>跟拍场次 <b>3</b> 场</li>
+          <li>新增毛片 <b>2146</b> 张</li>
+          <li>精修交付 <b>218</b> 张</li>
+          <li>勘误记录 <b>2</b> 条</li>
+        </ul>
+      </div>
+      <div class="card side-quote">
+        <p><b>归档提醒</b><br>11 月 4 日及之前的场次，原始卡内文件保留到 11 月 11 日再格式化。苏州河场次的光位图单独存了一份 PDF。</p>
+      </div>
+      <div class="card">
+        <h2>常用机型档</h2>
+        <ul class="side-list">
+          <li>全画幅 · 参与 13 场</li>
+          <li>APS-C · 参与 5 场</li>
+          <li>中画幅 · 参与 1 场</li>
+          <li>备机 · 参与 9 场</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#f2b032"/>
+            <rect x="11" y="20" width="42" height="29" rx="6" fill="none" stroke="#1b2a4a" stroke-width="3"/>
+            <circle cx="32" cy="34.5" r="8.5" fill="none" stroke="#1b2a4a" stroke-width="3"/>
+            <circle cx="32" cy="34.5" r="3" fill="#1b2a4a"/>
+            <rect x="22" y="13" width="13" height="7" rx="2.5" fill="#1b2a4a"/>
+          </svg>
+          <span>91传媒照片</span>
+        </div>
+        <p>把拍摄现场的灯位、机型、时段和交付节奏一并记下来，供同一场地复现与对照。</p>
+      </div>
+      <div class="foot-col">
+        <h2>拍摄形态</h2>
+        <a href="/#picks">棚拍布光</a>
+        <a href="/#picks">外景时段</a>
+        <a href="/#picks">活动跟拍</a>
+        <a href="/#picks">静物台拍摄</a>
+        <a href="/#picks">双人肖像</a>
+      </div>
+      <div class="foot-col">
+        <h2>方法与规范</h2>
+        <a href="/#deep">光比与色温</a>
+        <a href="/#guide">后期肤色统一</a>
+        <a href="/#guide">素材归档规范</a>
+        <a href="/#compare">器材机型档</a>
+        <a href="/#latest">勘误与修订</a>
+      </div>
+      <div class="foot-col">
+        <h2>互动与信息</h2>
+        <a href="/#comments">用户评论</a>
+        <a href="/#faq">常见问答</a>
+        <a href="/#news">相关资讯</a>
+        <a href="/#rank">出片效率榜单</a>
+        <a href="/#timeline">场次时间线</a>
+      </div>
+    </div>
+    <div class="foot-note">
+      说明：场次编号、机型参数、出片张数、耗时为示例数据，按实际拍摄记录口径整理，用于展示归档与对照方式；涉及具体场地与器材的数值以现场测量为准。页面更新时间为 2026 年 11 月 8 日，对应正文可核对更新项：11 月 7 日光比数据表补录、11 月 6 日苏州河成片上线、11 月 4 日 A 棚辅灯勘误。
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 91传媒照片 · 影像档案与拍摄现场记录</span>
+      <span>内容按场次归档，参数以实测记录为准</span>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" aria-label="回到页面顶部" title="回到顶部">↑</button>
+
+<script>
+(function(){
+  var menuBtn=document.getElementById('menuBtn');
+  var panel=document.getElementById('mobilePanel');
+  menuBtn.addEventListener('click',function(){
+    var open=panel.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded',open?'true':'false');
+  });
+  panel.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){panel.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');}
+  });
+
+  var toTop=document.getElementById('toTop');
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>500){toTop.classList.add('show');}else{toTop.classList.remove('show');}
+  },{passive:true});
+  toTop.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+
+  var links=Array.prototype.slice.call(document.querySelectorAll('.side-nav a'));
+  var targets=links.map(function(a){return document.querySelector(a.getAttribute('href').replace('/#','#'));});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          var id=en.target.id;
+          links.forEach(function(a){
+            a.classList.toggle('active', a.getAttribute('href')==='/# '+'' || a.getAttribute('href')==='/'+'#'+id);
+          });
+        }
+      });
+    },{rootMargin:'-130px 0px -60% 0px',threshold:0});
+    targets.forEach(function(t){if(t){io.observe(t);}});
+  }
+
+  var form=document.getElementById('searchForm');
+  var input=document.getElementById('searchInput');
+  var msg=document.getElementById('searchMsg');
+  var index=[];
+  document.querySelectorAll('main h2, main h3, main p, main li, main summary').forEach(function(el){
+    var t=el.textContent.replace(/\s+/g,' ').trim();
+    if(t.length>4){index.push({t:t.toLowerCase(),el:el});}
+  });
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var q=input.value.trim().toLowerCase();
+    if(!q){msg.style.display='none';return;}
+    var hit=null;
+    for(var i=0;i<index.length;i++){if(index[i].t.indexOf(q)>-1){hit=index[i];break;}}
+    msg.style.display='block';
+    if(hit){
+      var sec=hit.el.closest('section');
+      var target=sec||hit.el;
+      target.scrollIntoView({behavior:'smooth',block:'start'});
+      msg.textContent='已定位到相关内容';
+      setTimeout(function(){msg.style.display='none';},2600);
+    }else{
+      msg.textContent='未找到「'+input.value.trim()+'」，试试“辅灯”“苏州河”“交片”';
+      setTimeout(function(){msg.style.display='none';},3600);
+    }
+  });
+})();
+</script>
+</body>
+          </html>
